@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
@@ -9,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>/* required styles */
-
+ 
 .leaflet-pane,
 .leaflet-tile,
 .leaflet-marker-icon,
@@ -69,12 +70,12 @@
 	width: auto;
 	padding: 0;
 	}
-
+ 
 .leaflet-container img.leaflet-tile {
 	/* See: https://bugs.chromium.org/p/chromium/issues/detail?id=600120 */
 	mix-blend-mode: plus-lighter;
 }
-
+ 
 .leaflet-container.leaflet-touch-zoom {
 	-ms-touch-action: pan-x pan-y;
 	touch-action: pan-x pan-y;
@@ -113,19 +114,19 @@
 .leaflet-overlay-pane svg {
 	-moz-user-select: none;
 	}
-
+ 
 .leaflet-pane         { z-index: 400; }
-
+ 
 .leaflet-tile-pane    { z-index: 200; }
 .leaflet-overlay-pane { z-index: 400; }
 .leaflet-shadow-pane  { z-index: 500; }
 .leaflet-marker-pane  { z-index: 600; }
 .leaflet-tooltip-pane   { z-index: 650; }
 .leaflet-popup-pane   { z-index: 700; }
-
+ 
 .leaflet-map-pane canvas { z-index: 100; }
 .leaflet-map-pane svg    { z-index: 200; }
-
+ 
 .leaflet-vml-shape {
 	width: 1px;
 	height: 1px;
@@ -135,10 +136,10 @@
 	display: inline-block;
 	position: absolute;
 	}
-
-
+ 
+ 
 /* control positioning */
-
+ 
 .leaflet-control {
 	position: relative;
 	z-index: 800;
@@ -182,10 +183,10 @@
 .leaflet-right .leaflet-control {
 	margin-right: 10px;
 	}
-
-
+ 
+ 
 /* zoom and fade animations */
-
+ 
 .leaflet-fade-anim .leaflet-popup {
 	opacity: 0;
 	-webkit-transition: opacity 0.2s linear;
@@ -203,7 +204,7 @@
 svg.leaflet-zoom-animated {
 	will-change: transform;
 }
-
+ 
 .leaflet-zoom-anim .leaflet-zoom-animated {
 	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1);
 	   -moz-transition:    -moz-transform 0.25s cubic-bezier(0,0,0.25,1);
@@ -215,14 +216,14 @@ svg.leaflet-zoom-animated {
 	   -moz-transition: none;
 	        transition: none;
 	}
-
+ 
 .leaflet-zoom-anim .leaflet-zoom-hide {
 	visibility: hidden;
 	}
-
-
+ 
+ 
 /* cursors */
-
+ 
 .leaflet-interactive {
 	cursor: pointer;
 	}
@@ -247,7 +248,7 @@ svg.leaflet-zoom-animated {
 	cursor:    -moz-grabbing;
 	cursor:         grabbing;
 	}
-
+ 
 /* marker & overlays interactivity */
 .leaflet-marker-icon,
 .leaflet-marker-shadow,
@@ -256,7 +257,7 @@ svg.leaflet-zoom-animated {
 .leaflet-tile-container {
 	pointer-events: none;
 	}
-
+ 
 .leaflet-marker-icon.leaflet-interactive,
 .leaflet-image-layer.leaflet-interactive,
 .leaflet-pane > svg path.leaflet-interactive,
@@ -264,9 +265,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
 	pointer-events: auto;
 	}
-
+ 
 /* visual tweaks */
-
+ 
 .leaflet-container {
 	background: #ddd;
 	outline-offset: 1px;
@@ -278,8 +279,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	border: 2px dotted #38f;
 	background: rgba(255,255,255,0.5);
 	}
-
-
+ 
+ 
 /* general typography */
 .leaflet-container {
 	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -287,10 +288,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	font-size: 0.75rem;
 	line-height: 1.5;
 	}
-
-
+ 
+ 
 /* general toolbar styles */
-
+ 
 .leaflet-bar {
 	box-shadow: 0 1px 5px rgba(0,0,0,0.65);
 	border-radius: 4px;
@@ -330,7 +331,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	background-color: #f4f4f4;
 	color: #bbb;
 	}
-
+ 
 .leaflet-touch .leaflet-bar a {
 	width: 30px;
 	height: 30px;
@@ -344,22 +345,22 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	border-bottom-left-radius: 2px;
 	border-bottom-right-radius: 2px;
 	}
-
+ 
 /* zoom control */
-
+ 
 .leaflet-control-zoom-in,
 .leaflet-control-zoom-out {
 	font: bold 18px 'Lucida Console', Monaco, monospace;
 	text-indent: 1px;
 	}
-
+ 
 .leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out  {
 	font-size: 22px;
 	}
-
-
+ 
+ 
 /* layers control */
-
+ 
 .leaflet-control-layers {
 	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
 	background: #fff;
@@ -411,15 +412,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	border-top: 1px solid #ddd;
 	margin: 5px -10px 5px -6px;
 	}
-
+ 
 /* Default icon URLs */
 .leaflet-default-icon-path { /* used only in path-guessing heuristic, see L.Icon.Default */
 	background-image: url(images/marker-icon.png);
 	}
-
-
+ 
+ 
 /* attribution and scale controls */
-
+ 
 .leaflet-container .leaflet-control-attribution {
 	background: #fff;
 	background: rgba(255, 255, 255, 0.8);
@@ -469,7 +470,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-control-scale-line:not(:first-child):not(:last-child) {
 	border-bottom: 2px solid #777;
 	}
-
+ 
 .leaflet-touch .leaflet-control-attribution,
 .leaflet-touch .leaflet-control-layers,
 .leaflet-touch .leaflet-bar {
@@ -480,10 +481,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	border: 2px solid rgba(0,0,0,0.2);
 	background-clip: padding-box;
 	}
-
-
+ 
+ 
 /* popup */
-
+ 
 .leaflet-popup {
 	position: absolute;
 	text-align: center;
@@ -519,10 +520,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	width: 17px;
 	height: 17px;
 	padding: 1px;
-
+ 
 	margin: -10px auto 0;
 	pointer-events: auto;
-
+ 
 	-webkit-transform: rotate(45deg);
 	   -moz-transform: rotate(45deg);
 	    -ms-transform: rotate(45deg);
@@ -554,34 +555,34 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-popup-scrolled {
 	overflow: auto;
 	}
-
+ 
 .leaflet-oldie .leaflet-popup-content-wrapper {
 	-ms-zoom: 1;
 	}
 .leaflet-oldie .leaflet-popup-tip {
 	width: 24px;
 	margin: 0 auto;
-
+ 
 	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)";
 	filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
 	}
-
+ 
 .leaflet-oldie .leaflet-control-zoom,
 .leaflet-oldie .leaflet-control-layers,
 .leaflet-oldie .leaflet-popup-content-wrapper,
 .leaflet-oldie .leaflet-popup-tip {
 	border: 1px solid #999;
 	}
-
-
+ 
+ 
 /* div icon */
-
+ 
 .leaflet-div-icon {
 	background: #fff;
 	border: 1px solid #666;
 	}
-
-
+ 
+ 
 /* Tooltip */
 /* Base styles for the element that has a tooltip */
 .leaflet-tooltip {
@@ -613,9 +614,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	background: transparent;
 	content: "";
 	}
-
+ 
 /* Directions */
-
+ 
 .leaflet-tooltip-bottom {
 	margin-top: 6px;
 }
@@ -659,9 +660,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	margin-left: -12px;
 	border-right-color: #fff;
 	}
-
+ 
 /* Printing */
-
+ 
 @media print {
 	/* Prevent printers from removing background-images of controls. */
 	.leaflet-control {
@@ -725,14 +726,14 @@ p{margin:0}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 :focus-visible{outline:1.5px solid var(--fg);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition-duration:.001ms!important}}
-
+ 
 /* starfield dot grid */
 .stars{position:fixed;inset:0;z-index:-1;pointer-events:none;
   background-image:radial-gradient(var(--dot) 1px,transparent 1.4px);background-size:104px 104px;background-position:12px 30px;opacity:.9}
 .stars::after{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--dot) .8px,transparent 1.2px);background-size:173px 173px;background-position:60px 90px;opacity:.7;animation:twinkle 6s ease-in-out infinite alternate}
 @keyframes twinkle{from{opacity:.25}to{opacity:.8}}
 .vignette{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(1100px 700px at 50% 0%,transparent 40%,var(--bg) 100%)}
-
+ 
 /* progress + nav */
 .progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--fg);z-index:2100;box-shadow:0 0 12px var(--glow)}
 .nav{position:sticky;top:0;z-index:2000;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
@@ -755,7 +756,7 @@ p{margin:0}
   .links a{padding:13px 0;border-top:1px solid var(--line)}
   .menubtn{display:grid}
 }
-
+ 
 /* shared type */
 .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--fg-2);display:flex;align-items:center;gap:14px}
 .eyebrow::before{content:"";width:44px;height:1px;background:var(--line-2)}
@@ -765,7 +766,7 @@ p{margin:0}
 .lede{color:var(--body);font-size:16.5px;max-width:58ch;line-height:1.65}
 .small{font-size:12.5px;color:var(--fg-2);line-height:1.6}
 .label{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-2)}
-
+ 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:12px;padding:15px 24px;border-radius:999px;border:1px solid var(--line-2);background:transparent;color:var(--fg);font:500 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
 .btn:hover{border-color:var(--fg);transform:translateY(-2px)}
@@ -773,14 +774,14 @@ p{margin:0}
 .btn.solid:hover{box-shadow:0 0 0 6px color-mix(in srgb,var(--fg) 10%,transparent)}
 .btn .arr{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;border:1px solid currentColor;font-size:12px;margin-right:-10px}
 .btn.sm{padding:10px 16px;font-size:10.5px}
-
+ 
 /* sections */
 section{position:relative}
 .sec{padding:clamp(90px,12vw,150px) 0 0}
 .sec-top{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,6vw,90px);align-items:end;margin:34px 0 clamp(44px,6vw,70px)}
 .sec-top .lede{justify-self:end}
 @media (max-width:860px){.sec-top{grid-template-columns:1fr}.sec-top .lede{justify-self:start}}
-
+ 
 /* hairline grid */
 .hgrid{display:grid;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .hgrid>*{padding:clamp(24px,3vw,38px) clamp(0px,2vw,30px) clamp(24px,3vw,38px) 0;border-right:1px solid var(--line)}
@@ -791,12 +792,12 @@ section{position:relative}
 @media (max-width:700px){.g2,.g3,.g4,.g5{grid-template-columns:1fr}.hgrid>*{border-right:0;padding-left:0!important;padding-right:0}.hgrid>*+*{border-top:1px solid var(--line)}}
 .idx{font-family:var(--mono);font-size:11px;color:var(--fg-2);letter-spacing:.1em}
 .tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-2);margin-top:18px;display:block}
-
+ 
 /* reveal */
 html.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 html.js .rv.in{opacity:1;transform:none}
 html.js .rv.d1{transition-delay:.08s}html.js .rv.d2{transition-delay:.16s}html.js .rv.d3{transition-delay:.24s}
-
+ 
 /* HERO */
 .hero{min-height:calc(100vh - 84px);display:flex;flex-direction:column;justify-content:center;padding:40px 0 60px;position:relative;overflow:hidden}
 .orbits{position:absolute;right:-8vw;top:50%;width:min(760px,82vw);aspect-ratio:1;transform:translateY(-52%);pointer-events:none;opacity:.9}
@@ -821,7 +822,7 @@ html.js .rv.d1{transition-delay:.08s}html.js .rv.d2{transition-delay:.16s}html.j
 .hero-meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:56px;position:relative;z-index:1}
 .hero-meta div{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-2)}
 .hero-meta b{display:block;color:var(--fg);font-family:var(--mono);font-size:13px;letter-spacing:0;font-weight:500;margin-bottom:2px}
-
+ 
 /* MATCH */
 .world .who{font-size:12px;color:var(--fg-2)}
 .world h3{font-size:clamp(22px,2.4vw,30px);margin:14px 0 8px}
@@ -837,7 +838,7 @@ html.js .rv.d1{transition-delay:.08s}html.js .rv.d2{transition-delay:.16s}html.j
 .stat span{display:block;margin-top:10px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-2)}
 .stat p{margin-top:12px;font-size:13px;color:var(--body);line-height:1.55}
 .statsrow{border-top:0}
-
+ 
 /* MAPS */
 .twin{display:grid;grid-template-columns:1.35fr 1fr;gap:14px}
 @media (max-width:980px){.twin{grid-template-columns:1fr}}
@@ -912,7 +913,7 @@ select option{background:var(--bg);color:var(--fg)}
 .pbeacon{width:22px;height:22px;border-radius:50%;border:1.5px solid #fff;display:grid;place-items:center;box-shadow:0 0 16px rgba(255,255,255,.8)}
 .pbeacon::after{content:"";width:6px;height:6px;border-radius:50%;background:#fff}
 .pbeacon.p2{opacity:.65;border-style:dashed}
-
+ 
 /* benchmark block */
 .bench-grid{margin-top:14px}
 .xsec{width:100%;height:auto;display:block}
@@ -929,7 +930,7 @@ table.mini td{padding:11px 0;border-bottom:1px solid var(--line);color:var(--bod
 table.mini td b{color:var(--fg);font-weight:600}
 table.mini td.n,table.mini th.n{text-align:right;font-family:var(--mono);font-size:12px}
 .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
-
+ 
 /* COMPARE */
 .cmp{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .cmp>div{padding:34px 0}
@@ -957,7 +958,7 @@ table.mini td.n,table.mini th.n{text-align:right;font-family:var(--mono);font-si
 .drivers li b{color:var(--fg);font-weight:600}
 .usecase{margin-top:20px;padding:16px 18px;border-radius:16px;border:1px dashed var(--line-2);font-size:13px;color:var(--body)}
 .usecase b{color:var(--fg)}
-
+ 
 /* REGISTRY */
 .regtools{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:16px}
 .tablewrap{overflow-x:auto;border-top:1px solid var(--line-2)}
@@ -1007,7 +1008,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border:0;border-radiu
 .presets{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
 .presets button{border:1px solid var(--line);background:transparent;color:var(--fg-2);font:500 11px var(--sans);padding:6px 11px;border-radius:999px;cursor:pointer;transition:color .2s,border-color .2s}
 .presets button:hover{color:var(--fg);border-color:var(--fg)}
-
+ 
 /* METHOD */
 .flow{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:0}
 .flow span{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg)}
@@ -1022,13 +1023,13 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border:0;border-radiu
 .verdict.pass{background:var(--pill-bg);color:var(--pill-fg);border-color:var(--pill-bg)}
 .verdict.fail{color:var(--c-volc);border-color:color-mix(in srgb,var(--c-volc) 55%,transparent)}
 .honest{margin-top:26px;max-width:80ch}
-
+ 
 /* ROADMAP */
 .road dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:18px 0 0;font-size:12px}
 .road dt{color:var(--fg-2);font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding-top:2px}
 .road dd{margin:0;font-family:var(--mono);font-size:11.5px;color:var(--body)}
 .road .btn{margin-top:22px}
-
+ 
 /* GEOMETRY MATRIX + THREE-TARGET TABLE */
 .geo{margin-top:clamp(40px,5vw,60px)}
 .geo-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:6px}
@@ -1044,7 +1045,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border:0;border-radiu
 .tri-t .bt{font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
 .linkstrip .tri{font-family:var(--mono);font-size:10.5px;color:var(--fg-2);letter-spacing:.02em;text-align:center}
 .linkstrip .tri b{color:var(--fg);font-weight:500}
-
+ 
 /* map tone: keep imagery in the page's monochrome palette */
 html[data-theme="dark"] .lt-mono{filter:grayscale(1) brightness(.62) contrast(1.08)}
 html[data-theme="light"] .lt-mono{filter:grayscale(1) brightness(1.03)}
@@ -1058,7 +1059,7 @@ html[data-theme="light"] .lt-img{filter:grayscale(1) brightness(1.08) contrast(.
 .leaflet-tooltip.atip::before{display:none}
 .drivers li span{color:var(--fg-2)}
 .truecolour .lt-img{filter:none!important}
-
+ 
 /* ATLAS */
 .atlas-wrap{max-width:1380px;margin:0 auto;padding:0 clamp(12px,2.5vw,32px)}
 .atlas{position:relative;isolation:isolate;height:min(760px,86vh);min-height:560px;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:var(--bg-2)}
@@ -1105,6 +1106,7 @@ html[data-theme="light"] .lt-img{filter:grayscale(1) brightness(1.08) contrast(.
 #aTileNote{top:auto;bottom:16px;left:290px;right:342px}
 @media (max-width:900px){#aTileNote{left:16px;right:16px;bottom:auto;top:66px}}
 .amark{position:relative}
+.amark .c{position:absolute;border-radius:50%}
 .amark.primary .c{inset:4px;background:var(--c);box-shadow:0 0 0 2px rgba(0,0,0,.65),0 0 12px var(--c)}
 .amark.bench .c{inset:3px;border:2px solid var(--fg);background:color-mix(in srgb,var(--bg) 60%,transparent);box-shadow:0 0 10px var(--glow)}
 .amark.sens .c{inset:5px;border:1.5px dashed var(--fg-2)}
@@ -1120,13 +1122,13 @@ html[data-theme="light"] .lt-img{filter:grayscale(1) brightness(1.08) contrast(.
   .apanel,.adetail{position:static;width:auto;max-height:none;margin:12px;border-radius:16px}
   .atlas .tilenote{top:66px}
 }
-
+ 
 /* COMPARE extras */
 .mcrow{display:flex;gap:18px;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--line);font-size:12px;color:var(--fg-2)}
 .mcrow b{font-family:var(--mono);font-weight:500;color:var(--fg);margin-left:4px}
 .drvline{margin:10px 0 0;font-size:13.5px;color:var(--body)}
-
-
+ 
+ 
 /* COMPARE · head to head */
 :root{--s1:#f1f1f1;--s2:#e0894a;--s3:#6f93bd}
 html[data-theme="light"]{--s1:#0b0b0b;--s2:#c8682a;--s3:#3f6f9f}
@@ -1204,7 +1206,7 @@ table.reg td.cmpcell{padding:0 4px 0 10px!important;width:44px}
 .cmpt{width:30px;height:30px;border-radius:50%;border:1px solid var(--line-2);background:transparent;color:var(--fg-2);cursor:pointer;font-size:15px;display:grid;place-items:center;transition:all .2s}
 .cmpt:hover{color:var(--fg);border-color:var(--fg)}
 .cmpt[aria-pressed="true"]{background:var(--c,var(--fg));border-color:var(--c,var(--fg));color:var(--bg)}
-
+ 
 /* CLOSE + FOOTER */
 .close{padding:clamp(110px,14vw,180px) 0 clamp(90px,10vw,130px);text-align:center;position:relative;overflow:hidden}
 .close .rings{position:absolute;left:50%;top:50%;width:min(900px,120vw);aspect-ratio:1;transform:translate(-50%,-50%);pointer-events:none}
@@ -1232,7 +1234,7 @@ footer a.top:hover{color:var(--fg)}
 <div class="stars" aria-hidden="true"></div>
 <div class="vignette" aria-hidden="true"></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
-
+ 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="emblem" viewBox="0 0 48 48">
     <circle cx="24" cy="24" r="14.5" fill="none" stroke="currentColor" stroke-width="4.2"/>
@@ -1241,7 +1243,7 @@ footer a.top:hover{color:var(--fg)}
     <circle cx="40.5" cy="15.2" r="2.8" fill="currentColor"/>
   </symbol>
 </svg>
-
+ 
 <header class="nav" id="nav">
   <div class="wrap">
     <a class="brand" href="#home" aria-label="CaveSight home"><svg><use href="#emblem"/></svg><b>CAVESIGHT</b></a>
@@ -1264,7 +1266,7 @@ footer a.top:hover{color:var(--fg)}
     </div>
   </div>
 </header>
-
+ 
 <main id="home">
 <!-- HERO -->
 <section class="hero">
@@ -1286,12 +1288,13 @@ footer a.top:hover{color:var(--fg)}
       <div><b>16</b>Registry sites</div>
       <div><b>60</b>Scan points</div>
       <div><b>3</b>Planetary targets</div>
+      <div><b>0.0%</b>Missing data</div>
       <div><b>v8.1.1</b>Pipeline · live run</div>
     </div>
   </div>
   <div class="scrollcue" aria-hidden="true"><div class="wrap"><i></i>Scroll to explore</div></div>
 </section>
-
+ 
 <!-- 01 MATCH -->
 <section class="sec" id="match">
   <div class="wrap">
@@ -1350,7 +1353,7 @@ footer a.top:hover{color:var(--fg)}
     </div>
   </div>
 </section>
-
+ 
 <!-- 02 MAPS -->
 <section class="sec" id="maps">
   <div class="wrap">
@@ -1389,7 +1392,7 @@ footer a.top:hover{color:var(--fg)}
           </div>
         </div>
       </div>
-
+ 
       <div class="mapcard">
         <div class="map" id="pmap" role="application" aria-label="Moon and Mars target map"></div>
         <div class="maphead">
@@ -1407,13 +1410,13 @@ footer a.top:hover{color:var(--fg)}
         </div>
       </div>
     </div>
-
+ 
     <div class="linkstrip rv" aria-live="polite">
       <div class="end"><span class="label">Earth site</span><b id="lsEarth">Umm Jirsan</b><p class="small" id="lsEarthSub">Harrat Khaybar · Saudi Arabia</p></div>
       <div class="mid"><span class="label" id="lsKind">Best of three targets</span><strong id="lsScore">70.8%</strong><i></i><span class="tri" id="lsTri"></span></div>
       <div class="end r"><span class="label" id="lsBody">Moon target</span><b id="lsTarget">Mare Tranquillitatis Pit</b><p class="small" id="lsTargetSub">8.3355° N · 33.2220° E</p></div>
     </div>
-
+ 
     <div class="hgrid g2 bench-grid rv">
       <div>
         <span class="idx">LUNAR BENCHMARK · SCHEMATIC, NOT TO SCALE</span>
@@ -1471,7 +1474,7 @@ footer a.top:hover{color:var(--fg)}
     </div>
   </div>
 </section>
-
+ 
 <!-- 03 ATLAS -->
 <section class="sec" id="atlas">
   <div class="wrap">
@@ -1525,7 +1528,7 @@ footer a.top:hover{color:var(--fg)}
     <p class="small atlas-note rv">Climate values come from NASA POWER pixels 55–110 km wide (meteorology 0.5°, solar and albedo 1°), so neighbouring scan points share most of their climate. The scan marks where to look next; it is not a map of where lava tubes are. Scores are shown for the 12 scan points printed in this run; the rest are in <span class="mono">cavesight_discovery_scan.csv</span>.</p>
   </div>
 </section>
-
+ 
 <!-- 04 COMPARE -->
 <section class="sec" id="compare">
   <div class="wrap">
@@ -1534,7 +1537,7 @@ footer a.top:hover{color:var(--fg)}
       <h2 class="h2 rv">Put sites<br><span class="dim">head to head.</span></h2>
       <p class="lede rv d1">Pick up to three sites (primary sites, benchmarks or scan candidates) and a target. CaveSight overlays them on one radar, says who wins and why, and lines up every reading against the target. You can also add sites from the maps, the atlas or the registry.</p>
     </div>
-
+ 
     <div class="cbar rv">
       <div class="cbar-row">
         <div class="cpicked" id="cPicked" aria-live="polite"></div>
@@ -1557,7 +1560,7 @@ footer a.top:hover{color:var(--fg)}
       </div>
       <div class="cpresets" id="cPresets"><span class="label">Try</span></div>
     </div>
-
+ 
     <div class="cmp rv">
       <div>
         <div class="chartbox"><canvas id="radarChart" role="img" aria-label="Radar chart overlaying the compared sites on the target"></canvas></div>
@@ -1568,7 +1571,7 @@ footer a.top:hover{color:var(--fg)}
         <div class="verdict-box" id="cVerdict" aria-live="polite"></div>
       </div>
     </div>
-
+ 
     <div class="ctable-wrap rv">
       <div class="ctable-head">
         <span class="idx">FEATURE BY FEATURE · <span id="ctTarget">MOON PIT</span></span>
@@ -1580,7 +1583,7 @@ footer a.top:hover{color:var(--fg)}
       <div class="tablewrap"><table class="ctable" id="cTable"></table></div>
       <p class="small" style="margin-top:12px">Scores: higher is better, best in each row marked ●. Readings: the value closest to the target is marked ●, and the small number is the distance to the target. Click a site's column header to open its deep dive.</p>
     </div>
-
+ 
     <div class="deep rv" id="deep">
       <div class="deep-head">
         <span class="idx">DEEP DIVE</span>
@@ -1606,13 +1609,13 @@ footer a.top:hover{color:var(--fg)}
     </div>
   </div>
 </section>
-
+ 
 <div class="ctray" id="cTray" role="region" aria-label="Comparison tray">
   <span class="ctray-dots" id="cTrayDots"></span>
   <span id="cTrayText">Comparing</span>
   <button class="btn sm solid" type="button" id="cTrayGo">Open comparison ↓</button>
 </div>
-
+ 
 <!-- 04 REGISTRY -->
 <section class="sec" id="registry">
   <div class="wrap">
@@ -1663,7 +1666,7 @@ footer a.top:hover{color:var(--fg)}
       </div>
       <p class="small" id="regNote" style="margin-top:14px">All values from CAVE_SIGHT_Pipeline.ipynb v8.1.1, live Colab run. Climate: NASA POWER climatology 2001–2020 (community=RE). Elevation: Copernicus DEM GLO-90 (ESA, 90 m) via Open-Meteo, 3×3 window at 0.00135° (~150 m); slope = atan(ΔZ / 150 m). Moon, Mars and polar scores are recomputed in your browser from these readings and match the notebook to 0.01. MC rank 90% = Monte Carlo 5th–95th percentile rank over 1,000 noisy re-runs (Moon target).</p>
     </div>
-
+ 
     <div class="under rv">
       <div>
         <span class="idx">DISCOVERY SCAN · 60 POINTS · 10 REGIONS · ≥ 25 KM FROM ANY KNOWN SITE</span>
@@ -1713,7 +1716,7 @@ footer a.top:hover{color:var(--fg)}
     </div>
   </div>
 </section>
-
+ 
 <!-- 05 METHOD -->
 <section class="sec" id="method">
   <div class="wrap">
@@ -1746,7 +1749,7 @@ footer a.top:hover{color:var(--fg)}
     <p class="lede honest rv">In plain words: the tool reliably recognises a known lunar-scale lava tube from open data, and it cannot yet prove that volcanic terrain and desert sand are always separable, with only eight sites and 55–110 km climate pixels. It also does not show that any site contains a tube; a surface DEM cannot see one. The fix is more sites and finer data (30 m HLS, 60 m EMIT, thermal buffering), not tuning the weights.</p>
   </div>
 </section>
-
+ 
 <!-- 06 ROADMAP -->
 <section class="sec" id="roadmap">
   <div class="wrap">
@@ -1771,7 +1774,7 @@ footer a.top:hover{color:var(--fg)}
     </div>
   </div>
 </section>
-
+ 
 <!-- CLOSE -->
 <section class="close" id="next">
   <div class="rings" aria-hidden="true"><svg viewBox="0 0 900 900"><circle cx="450" cy="450" r="440"/><circle cx="450" cy="450" r="330"/><circle cx="450" cy="450" r="220"/></svg></div>
@@ -1787,7 +1790,7 @@ footer a.top:hover{color:var(--fg)}
   </div>
 </section>
 </main>
-
+ 
 <div class="credits">
   <span>NASA POWER · CERES / MERRA-2</span><span>Copernicus DEM GLO-90 · ESA</span><span>NASA Moon Trek · LRO WAC</span><span>NASA Mars Trek · Viking MDIM</span><span>NASA GIBS / Worldview</span><span>NASA Earthdata CMR</span><span>NASA ASF · Sentinel-1</span><span>LRO Mini-RF · Diviner · LROC</span><span>Esri basemaps</span><span>Carrer et al. 2024</span><span>Stewart et al. 2024</span><span>Horvath et al. 2022</span><span>Cushing et al. 2007</span><span>Paige et al. 2010</span>
 </div>
@@ -1800,7 +1803,7 @@ footer a.top:hover{color:var(--fg)}
   </div>
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
+ 
 <script>document.documentElement.classList.add('js');</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
@@ -1812,7 +1815,7 @@ try { const t = localStorage.getItem('cavesight-theme'); if (t === 'light' || t 
 const cssv = v => getComputedStyle(root).getPropertyValue(v).trim();
 const theme = () => root.dataset.theme === 'light' ? 'light' : 'dark';
 const $ = id => document.getElementById(id);
-
+ 
 /* ================= DATA · CAVE_SIGHT_Pipeline v8.1.1 live run =================
    Inputs: NASA POWER climatology (community=RE) + Copernicus GLO-90 3×3 window (live, not the v4.0 table).
    Official composites: Moon from the export table; Mars from Cell 13e; Polar from Cell 13e2. */
@@ -1866,7 +1869,7 @@ const SITES = [
 ];
 SITES.forEach(s => { s.slope = Math.atan(s.relief/150)*180/Math.PI; s.score = s.off.Moon; });
 SITES.slice().sort((a,b)=>b.off.Moon-a.off.Moon).forEach((s,i)=>s.rank=i+1);
-
+ 
 const BENCH = [
   {id:'SITE_13', name:'Atacama Desert (Yungay)', sub:'Chile', lat:-24.0900, lon:-69.9700, albedo:0.22, solar:7.21, relief:13, slope:4.95, t2m:17.1,
    off:{Moon:49.1, Mars:52.1, Polar:48.1}, cold:false, qa:'Named in the challenge statement; hyper-arid, cold nights, high UV.',
@@ -1891,7 +1894,7 @@ const SENS = [
   {id:'SITE_12', name:'Amazon Basin (Manaus)', sub:'Brazil', lat:-3.1190, lon:-60.0217, kind:'Negative control', albedo:0.11, solar:4.66, relief:19, slope:7.22,
    qa:'Humid rainforest control. In the 12-site run it ranks first on the geology index, a reminder that geology proxies alone are not enough.'}
 ];
-
+ 
 /* Pre-registered targets (Cell 2) */
 const REFS = {
   Moon:  {albedo:0.10, relief:45,  slope:15, swing:25, rain:0, solar:7.0, sd:0.005},
@@ -1912,7 +1915,7 @@ const PLACES = {
     text:'Phase 2 target. Skylight screening will follow the Arsia Mons method. Marker shows the summit region.'}
 };
 const PLACE_OF = {Moon:'moonPit', Mars:'arsia', Polar:'polar'};
-
+ 
 /* Discovery scan (Cell 2 + 13f): 10 boxes × 6 deterministic interior points. Scores: the 12 rows printed in this run. */
 const REGIONS = {
   Harrat_Khaybar_SA:{lat:[25.00,26.30], lon:[39.30,40.30], kind:'volcanic', label:'Harrat Khaybar, Saudi Arabia'},
@@ -1949,7 +1952,7 @@ Object.entries(REGIONS).forEach(([reg, b]) => {
     SCAN.push({id, reg, kind:b.kind, lat:+la.toFixed(4), lon:+lo.toFixed(4), pr:SCAN_PRINTED[id]||null,
       near: Math.min(...REGISTRY_PTS.map(s=>hav(la,lo,s.lat,s.lon)))}); }));
 });
-
+ 
 /* ================= SCORING ENGINE (notebook Cell 8, frozen reference scaling) =================
    z-scale fitted once on the 8 primary sites + the target row; pillar = 100·exp(−k·RMS Δz); composite = geometric mean. */
 const FEATS = ['albedo','relief','slope','swing','rain','solar','sd'];
@@ -1975,7 +1978,7 @@ SITES.forEach(s=>{
 BENCH.forEach(b=>{ b.best = ['Moon','Mars','Polar'].reduce((a,c)=>b.off[c]>b.off[a]?c:a, 'Moon'); });
 const SELF_CHECK = Math.max(...SITES.flatMap(s=>['Moon','Mars','Polar'].map(t=>Math.abs(s.sc[t].total-s.off[t]))));
 console.info(`CaveSight: in-browser engine vs notebook, max |Δ| = ${SELF_CHECK.toFixed(3)} points`);
-
+ 
 /* Notebook Cell 13: radar axes + data-driven physical drivers */
 const NICE = {albedo:['snow-free albedo',v=>v.toFixed(2)], relief:['local relief',v=>v.toFixed(0)+' m'], slope:['rim gradient',v=>v.toFixed(1)+'°'],
   swing:['diurnal swing',v=>v.toFixed(1)+' °C'], rain:['precipitation',v=>v.toFixed(2)+' mm/d'], solar:['solar irradiance',v=>v.toFixed(2)+' kWh/m²/d'], sd:['seasonal albedo variability',v=>v.toFixed(3)]};
@@ -1988,9 +1991,9 @@ function drivers(s, t){
   return {line:`Score driven mainly by <b>${lead}</b> (Geology ${p.geo.toFixed(0)} · Environment ${p.envIdx.toFixed(0)}).`,
           best:ord.slice(0,2).map(fmt), worst:ord.slice(-2).reverse().map(fmt)};
 }
-
+ 
 const toast = (msg, ms=4200) => { const t=$('toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('show'), ms); };
-
+ 
 /* ================= MAP HELPERS ================= */
 const ESRI = 'https://server.arcgisonline.com/ArcGIS/rest/services/';
 const ESRI_ATTR = 'Base map © Esri — Esri, HERE, Garmin, USGS, NGA (non-USG background)';
@@ -2033,7 +2036,7 @@ function earthBases(mapRef, extra, noteId){
   apply();
   return {set(m){ st.mode=m; apply(); return !st.failed; }, retheme(){ if(st.mode==='mono'||st.failed) apply(); }, failed:()=>st.failed};
 }
-
+ 
 /* ================= EARTH MAP (twin view) ================= */
 const map = L.map('map', {zoomControl:false, worldCopyJump:true, minZoom:2, scrollWheelZoom:false}).setView([22, 10], 2);
 L.control.zoom({position:'topright'}).addTo(map);
@@ -2047,7 +2050,7 @@ document.querySelectorAll('[data-base]').forEach(btn=>btn.addEventListener('clic
   document.querySelectorAll('[data-base]').forEach(b=>b.setAttribute('aria-pressed', b===btn));
   if(!earth.set(btn.dataset.base)) toast('Base maps are not available in this preview. They will work on the hosted site.');
 }));
-
+ 
 const markers={}, markerLayer=L.layerGroup().addTo(map);
 const beaconIcon = (s, active) => L.divIcon({className:'', iconSize:[20,20], iconAnchor:[10,10], popupAnchor:[0,-10],
   html:`<div class="beacon ${active?'active':''}" style="--c:var(${CAT[s.cat].v})"><span class="ring"></span><span class="ring r2"></span><span class="core"></span></div>`});
@@ -2084,7 +2087,7 @@ function renderHeat(){
 }
 $('heatToggle').addEventListener('change', renderHeat);
 $('heatMetric').addEventListener('change', renderHeat);
-
+ 
 /* ================= MOON / MARS MAP (NASA Trek WMTS, equirectangular) ================= */
 const pmap = L.map('pmap', {crs:L.CRS.EPSG4326, zoomControl:false, minZoom:1, maxZoom:9, scrollWheelZoom:false, worldCopyJump:false, maxBounds:[[-92,-200],[92,200]]}).setView([PLACES.moonPit.lat, PLACES.moonPit.lon], 3);
 L.control.zoom({position:'topright'}).addTo(pmap);
@@ -2126,7 +2129,7 @@ document.querySelectorAll('[data-goto]').forEach(btn=>btn.addEventListener('clic
   $('maps').scrollIntoView({behavior:'smooth'});
   const g=btn.dataset.goto; setTimeout(()=>setBody(g==='polar'?'moon':g, g==='polar'?PLACES.polar:g==='mars'?PLACES.arsia:PLACES.moonPit), 500);
 }));
-
+ 
 /* ================= THREE-TARGET TABLE ================= */
 function renderTri(){
   const rows=[...SITES.map(s=>({...s, kind:CAT[s.cat].short, isB:false})), ...BENCH.map(b=>({...b, kind:'Benchmark', isB:true}))].sort((a,b)=>b.off.Moon-a.off.Moon);
@@ -2134,7 +2137,7 @@ function renderTri(){
     ${['Moon','Mars','Polar'].map(t=>`<td class="n">${t===r.best?'<b>':''}${r.off[t].toFixed(1)}${t===r.best?'</b>':''}</td>`).join('')}
     <td class="n"><span class="bt">${TSHORT[r.best]}${r.isB&&r.cold?' ❄':''}</span></td></tr>`).join('');
 }
-
+ 
 /* ================= COMPARE ================= */
 Chart.defaults.font.family='Inter';
 const radar = new Chart($('radarChart'), {
@@ -2177,7 +2180,7 @@ function select(id, opts={}){
   $('lsTargetSub').textContent=`${Math.abs(place.lat).toFixed(4)}° ${place.lat>=0?'N':'S'} · ${Math.abs(place.lon).toFixed(4)}° ${place.lon>=0?'E':'W'}`;
   document.querySelectorAll('#regBody tr').forEach(tr=>tr.classList.toggle('sel', tr.dataset.id===id));
 }
-
+ 
 /* ================= REGISTRY ================= */
 let sortKey='rank', sortDir=1, regCat='all';
 function renderReg(){
@@ -2223,7 +2226,7 @@ $('jsonFile').addEventListener('change', e=>{
     }catch(err){ toast('Could not read that file as JSON: '+err.message); }
   }; rd.readAsText(f); e.target.value='';
 });
-
+ 
 /* ================= CALCULATOR ================= */
 const simInputs={albedo:'sAlb', relief:'sRel', swing:'sSw', rain:'sRain', solar:'sSol', sd:'sSd'};
 let sTarget='Moon';
@@ -2232,5 +2235,435 @@ function simRender(){
   $('vAlb').textContent=r.albedo.toFixed(3); $('vRel').textContent=r.relief+' m'; $('vSw').textContent=r.swing.toFixed(1)+' °C';
   $('vRain').textContent=r.rain.toFixed(2)+' mm/day'; $('vSol').textContent=r.solar.toFixed(2)+' kWh/m²/day'; $('vSd').textContent=r.sd.toFixed(3);
   const p=score(r, sTarget);
-  const band=p.total
-
+  const band=p.total>=65?'strong':p.total>=50?'moderate':'weak';
+  const col=band==='strong'?cssv('--fg'):band==='moderate'?cssv('--c-volc'):cssv('--c-ctrl');
+  $('gVal').textContent=p.total.toFixed(1); $('gVal').style.color=col;
+  $('gArc').style.strokeDashoffset=(276.5*(1-p.total/100)).toFixed(1); $('gArc').style.stroke=col;
+  $('pReg').textContent=p.reg.toFixed(1)+'%'; $('pTopo').textContent=p.topo.toFixed(1)+'%'; $('pEnv').textContent=p.env.toFixed(1)+'%';
+  const rank=SITES.filter(s=>s.off[sTarget]>p.total).length+1;
+  $('pRank').textContent=`#${rank} of 9 · ${TSHORT[sTarget]}`;
+  const b=$('simBadge'); b.className='verdict '+(band==='strong'?'pass':band==='weak'?'fail':''); b.textContent=band+' analog';
+  let txt=band==='strong'?`Close to the ${tl(sTarget)} profile on all three pillars.`:band==='moderate'?'A partial match. Check which pillar is pulling it down.':`Unlikely to be an analog for the ${tl(sTarget)} with these readings.`;
+  if(r.sd>0.03) txt+=' Snow flag: albedo SD is above 0.03, so check the darkest-month albedo.';
+  if(r.albedo>0.21 && r.rain<0.5) txt+=' Bright and dry usually means quartz sand, like Algodones.';
+  $('simText').textContent=txt;
+}
+Object.values(simInputs).forEach(id=>$(id).addEventListener('input', simRender));
+document.querySelectorAll('[data-starget]').forEach(btn=>btn.addEventListener('click', ()=>{ sTarget=btn.dataset.starget; document.querySelectorAll('[data-starget]').forEach(b=>b.setAttribute('aria-pressed', b===btn)); simRender(); }));
+[{n:'Moon target', v:REFS.Moon}, {n:'Mars target', v:REFS.Mars}, {n:'Polar target', v:REFS.Polar},
+ ...SITES.slice().sort((a,b)=>a.rank-b.rank).map(s=>({n:s.name.replace(' National Monument','').replace(' Volcanic Field','').replace(' Lava Tubes','').replace(' Sand Dunes','').replace(' Desert Dunefield',''), v:s}))].forEach(pr=>{
+  const b=document.createElement('button'); b.type='button'; b.textContent=pr.n;
+  b.addEventListener('click', ()=>{ Object.entries(simInputs).forEach(([k,id])=>{ const el=$(id); el.value=Math.max(+el.min, Math.min(+el.max, pr.v[k])); }); simRender(); });
+  $('presets').appendChild(b);
+});
+ 
+/* ================= EARTH ATLAS ================= */
+const amap = L.map('amap', {zoomControl:false, worldCopyJump:true, minZoom:2, scrollWheelZoom:false}).setView([18, 12], 2);
+L.control.zoom({position:'topright'}).addTo(amap);
+amap.attributionControl.setPrefix('');
+amap.on('focus', ()=>amap.scrollWheelZoom.enable()); amap.on('blur', ()=>amap.scrollWheelZoom.disable());
+const atlasBase = earthBases(amap, {
+  sat:  L.tileLayer(ESRI+'World_Imagery/MapServer/tile/{z}/{y}/{x}', {maxZoom:18, className:'lt-img', attribution:'Imagery © Esri, Maxar, Earthstar Geographics'}),
+  nasa: L.tileLayer('https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2024-07-01/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg', {maxZoom:12, maxNativeZoom:9, className:'lt-img', attribution:'NASA EOSDIS GIBS / Worldview · MODIS Terra true colour'})
+}, 'aTileNote');
+document.querySelectorAll('[data-abase]').forEach(btn=>btn.addEventListener('click', ()=>{
+  document.querySelectorAll('[data-abase]').forEach(b=>b.setAttribute('aria-pressed', b===btn));
+  if(!atlasBase.set(btn.dataset.abase)) toast('Base maps are not available in this preview. They will work on the hosted site.');
+}));
+$('trueColour').addEventListener('change', e=>$('atlasCard').classList.toggle('truecolour', e.target.checked));
+const labelZoom = () => $('atlasCard').classList.toggle('show-labels', amap.getZoom()>=4);
+amap.on('zoomend', labelZoom);
+ 
+let aTarget='Moon', aSel=null;
+const AL = {primary:L.layerGroup(), bench:L.layerGroup(), sens:L.layerGroup(), scan:L.layerGroup(), regions:L.layerGroup(), heat:null};
+const aMarkers = {};
+const sizeFor = v => Math.round(Math.max(14, Math.min(30, 12 + (v-20)*0.33)));
+const shortName = n => n.replace(' National Monument','').replace(' Volcanic Field','').replace(' Lava Tubes','').replace(' Sand Dunes','').replace(' Desert Dunefield','').replace(/ \(.*\)/,'');
+function siteIcon(kind, item){
+  const v = kind==='sens' ? 0 : item.off[aTarget], sz = kind==='sens' ? 14 : sizeFor(v);
+  const c = kind==='primary' ? `--c:var(${CAT[item.cat].v})` : '';
+  return L.divIcon({className:'', iconSize:[sz,sz], iconAnchor:[sz/2,sz/2],
+    html:`<div class="amark ${kind} ${aSel&&aSel.id===item.id?'sel':''}" style="width:${sz}px;height:${sz}px;${c}"><span class="c"></span><span class="lbl">${shortName(item.name)}</span></div>`});
+}
+const scanIcon = sp => { const sz = sp.pr&&sp.pr.novel ? 11 : sp.pr ? 9 : 7;
+  return L.divIcon({className:'', iconSize:[sz,sz], iconAnchor:[sz/2,sz/2], html:`<div class="smark ${sp.pr?'scored':''} ${sp.pr&&sp.pr.novel?'novel':''} ${aSel&&aSel.id===sp.id?'sel':''}"></div>`}); };
+function buildAtlasMarkers(){
+  Object.values(AL).forEach(g=>g&&g.clearLayers&&g.clearLayers());
+  const tip = (m, txt) => m.bindTooltip(txt, {direction:'top', offset:[0,-8], className:'atip'});
+  SITES.forEach(s=>{ const m=L.marker([s.lat,s.lon],{icon:siteIcon('primary',s), keyboard:true, title:s.name, zIndexOffset:300}); tip(m, `${s.name} · ${TSHORT[aTarget]} ${s.off[aTarget].toFixed(1)}%`); m.on('click',()=>atlasSelect('primary',s)); AL.primary.addLayer(m); aMarkers[s.id]=m; });
+  BENCH.forEach(s=>{ const m=L.marker([s.lat,s.lon],{icon:siteIcon('bench',s), keyboard:true, title:s.name, zIndexOffset:200}); tip(m, `${s.name} · ${TSHORT[aTarget]} ${s.off[aTarget].toFixed(1)}%`); m.on('click',()=>atlasSelect('bench',s)); AL.bench.addLayer(m); aMarkers[s.id]=m; });
+  SENS.forEach(s=>{ const m=L.marker([s.lat,s.lon],{icon:siteIcon('sens',s), keyboard:true, title:s.name, zIndexOffset:100}); tip(m, `${s.name} · sensitivity set`); m.on('click',()=>atlasSelect('sens',s)); AL.sens.addLayer(m); aMarkers[s.id]=m; });
+  SCAN.forEach(sp=>{ const m=L.marker([sp.lat,sp.lon],{icon:scanIcon(sp), keyboard:false, title:sp.id}); tip(m, sp.pr?`${sp.id.replace('SCAN_','')} · ${TSHORT[aTarget]} ${sp.pr[aTarget].toFixed(1)}%${sp.pr.novel?' · novel':''}`:sp.id.replace('SCAN_','')); m.on('click',()=>atlasSelect('scan',sp)); AL.scan.addLayer(m); aMarkers[sp.id]=m; });
+  Object.entries(REGIONS).forEach(([k,b])=>{
+    const col = b.kind==='sand' ? cssv('--c-ctrl') : cssv('--c-volc');
+    const r=L.rectangle([[b.lat[0],b.lon[0]],[b.lat[1],b.lon[1]]], {color:col, weight:1, opacity:.85, dashArray:'4 4', fillColor:col, fillOpacity:.06});
+    r.bindTooltip(b.label, {sticky:true, className:'atip'}); r.on('click',()=>atlasSelect('region',{id:k, ...b})); AL.regions.addLayer(r);
+  });
+}
+function refreshIcons(){
+  SITES.forEach(s=>aMarkers[s.id].setIcon(siteIcon('primary',s)));
+  BENCH.forEach(s=>aMarkers[s.id].setIcon(siteIcon('bench',s)));
+  SENS.forEach(s=>aMarkers[s.id].setIcon(siteIcon('sens',s)));
+  SCAN.forEach(sp=>aMarkers[sp.id].setIcon(scanIcon(sp)));
+  SITES.concat(BENCH).forEach(s=>aMarkers[s.id].setTooltipContent(`${s.name} · ${TSHORT[aTarget]} ${s.off[aTarget].toFixed(1)}%`));
+  SCAN.filter(sp=>sp.pr).forEach(sp=>aMarkers[sp.id].setTooltipContent(`${sp.id.replace('SCAN_','')} · ${TSHORT[aTarget]} ${sp.pr[aTarget].toFixed(1)}%${sp.pr.novel?' · novel':''}`));
+}
+function renderAtlasHeat(){
+  if(AL.heat){ amap.removeLayer(AL.heat); AL.heat=null; }
+  if(!document.querySelector('[data-layer=heat]').checked || typeof L.heatLayer!=='function') return;
+  const pts=[...SITES, ...BENCH].map(s=>[s.lat,s.lon,s.off[aTarget]/100]).concat(SCAN.filter(sp=>sp.pr).map(sp=>[sp.lat,sp.lon,sp.pr[aTarget]/100]));
+  AL.heat=L.heatLayer(pts, {radius:42, blur:34, max:0.8, minOpacity:.3, gradient:heatGradient()}).addTo(amap);
+}
+document.querySelectorAll('[data-layer]').forEach(cb=>cb.addEventListener('change', ()=>{
+  const k=cb.dataset.layer;
+  if(k==='heat') return renderAtlasHeat();
+  cb.checked ? AL[k].addTo(amap) : amap.removeLayer(AL[k]);
+}));
+document.querySelectorAll('[data-atarget]').forEach(btn=>btn.addEventListener('click', ()=>{
+  aTarget=btn.dataset.atarget; document.querySelectorAll('[data-atarget]').forEach(b=>b.setAttribute('aria-pressed', b===btn));
+  refreshIcons(); renderAtlasHeat(); renderDetail();
+}));
+ 
+const tbars = off => `<div class="tbars">${['Moon','Mars','Polar'].map(t=>`<div class="tb ${t===aTarget?'on':''}"><div class="t"><span>${TNAME[t]}</span><b>${off[t].toFixed(1)}%</b></div><div class="bar"><i style="width:${off[t]}%;--c:${t===aTarget?cssv('--fg'):cssv('--fg-2')}"></i></div></div>`).join('')}</div>`;
+const fmtLL = (la,lo) => `${Math.abs(la).toFixed(4)}° ${la>=0?'N':'S'} · ${Math.abs(lo).toFixed(4)}° ${lo>=0?'E':'W'}`;
+const worldview = (la,lo) => `https://worldview.earthdata.nasa.gov/?v=${(lo-1.2).toFixed(2)},${(la-0.7).toFixed(2)},${(lo+1.2).toFixed(2)},${(la+0.7).toFixed(2)}`;
+const nf = n => n.toLocaleString('en-US');
+function renderDetail(){
+  const el=$('adetail');
+  if(!aSel){
+    el.innerHTML=`<span class="kind">Earth atlas · v8.1.1</span><h4>Click a site, a scan point or a region.</h4>
+      <p>Marker size follows the score against the target picked on the left. Labels appear when you zoom in.</p>
+      <dl><dt>Primary sites</dt><dd>8 · tested</dd><dt>Benchmarks</dt><dd>4 · scored, not tested</dd><dt>Sensitivity set</dt><dd>4 · dropped earlier, re-added</dd><dt>Scan points</dt><dd>60 in 10 regions</dd><dt>Novel candidates</dt><dd>10 (9 printed)</dd><dt>Missing data</dt><dd>0.0%</dd></dl>`;
+    return;
+  }
+  const {kind, item:s} = aSel, x = '<button class="adclose" type="button" aria-label="Close details" id="adClose">✕</button>';
+  if(kind==='primary'){
+    el.innerHTML=`${x}<span class="kind"><i class="dotc" style="--c:var(${CAT[s.cat].v})"></i>${CAT[s.cat].label} · Moon rank #${s.rank}</span><h4>${s.name}</h4><div class="where">${s.sub} · ${fmtLL(s.lat,s.lon)}</div>
+      ${tbars(s.off)}
+      <dl><dt>Geology · Env.</dt><dd>${s.sc[aTarget].geo.toFixed(1)} · ${s.sc[aTarget].envIdx.toFixed(1)}</dd><dt>Albedo · SD</dt><dd>${s.albedo.toFixed(2)} · ${s.sd.toFixed(3)}</dd><dt>Swing · rain</dt><dd>${s.swing.toFixed(1)} °C · ${s.rain.toFixed(2)} mm/d</dd><dt>Solar</dt><dd>${s.solar.toFixed(2)} kWh/m²/d</dd><dt>Relief · slope</dt><dd>${s.relief} m · ${s.slope.toFixed(1)}°</dd><dt>Mean temp.</dt><dd>${s.t2m.toFixed(1)} °C</dd><dt>MC rank 90%</dt><dd>${s.mc.ci} · P(#1) ${s.mc.p1}%</dd>
+      <dt>EMIT · HLS</dt><dd>${nf(s.cov.emit)} · ${nf(s.cov.hls)} granules</dd><dt>ECOSTRESS</dt><dd>${nf(s.cov.eco)} granules</dd><dt>Sentinel-1</dt><dd>${nf(s.cov.s1)} scenes</dd></dl>
+      <p>${s.use}${s.qa?` <span style="color:var(--fg-2)">QA: ${s.qa}</span>`:''}</p>
+      <div class="links">${addBtn(s.id)}<a class="btn sm" href="${worldview(s.lat,s.lon)}" target="_blank" rel="noopener">Worldview ↗</a></div>`;
+  } else if(kind==='bench'){
+    el.innerHTML=`${x}<span class="kind"><i class="sym ring" style="display:inline-block"></i>Benchmark analog · scored, not tested</span><h4>${s.name}</h4><div class="where">${s.sub} · ${fmtLL(s.lat,s.lon)}</div>
+      ${tbars(s.off)}
+      <dl><dt>Best target</dt><dd>${TNAME[s.best]}</dd><dt>Mean temp.</dt><dd>${s.t2m.toFixed(1)} °C</dd><dt>Cold check</dt><dd>${s.cold?'Pass (below 0 °C)':'No'}</dd><dt>Albedo</dt><dd>${s.albedo.toFixed(2)}</dd><dt>Solar</dt><dd>${s.solar.toFixed(2)} kWh/m²/d</dd><dt>Relief · slope</dt><dd>${s.relief} m · ${s.slope.toFixed(1)}°</dd></dl>
+      <p>${s.use} <span style="color:var(--fg-2)">QA: ${s.qa}</span></p>
+      <div class="links">${addBtn(s.id)}<a class="btn sm" href="${worldview(s.lat,s.lon)}" target="_blank" rel="noopener">Worldview ↗</a></div>`;
+  } else if(kind==='sens'){
+    el.innerHTML=`${x}<span class="kind"><i class="sym ring sm" style="display:inline-block"></i>Sensitivity set · ${s.kind}</span><h4>${s.name}</h4><div class="where">${s.sub} · ${fmtLL(s.lat,s.lon)}</div>
+      <dl style="margin-top:16px"><dt>Albedo</dt><dd>${s.albedo.toFixed(2)}</dd><dt>Solar</dt><dd>${s.solar.toFixed(2)} kWh/m²/d</dd><dt>Relief · slope</dt><dd>${s.relief} m · ${s.slope.toFixed(1)}°</dd></dl>
+      <p>Tried in earlier notebook versions, then dropped. Re-added only to test whether the result depends on which sites were picked. ${s.qa}</p>
+      <p style="color:var(--fg-2)">Per-site scores for this set are in <span class="mono">cavesight_all_sites_features.csv</span>, not in the run's printout.</p>`;
+  } else if(kind==='scan'){
+    const p=s.pr, reg=REGIONS[s.reg];
+    el.innerHTML=`${x}<span class="kind"><i class="sym dia ${p&&p.novel?'on':''}" style="display:inline-block"></i>Discovery scan · ${reg.kind==='sand'?'sand scan-control':'volcanic region'}</span><h4>${reg.label}</h4><div class="where">${s.id.replace('SCAN_','')} · ${fmtLL(s.lat,s.lon)}</div>
+      ${p ? tbars({Moon:p.Moon, Mars:p.Mars, Polar:p.Polar}) + `<dl><dt>Moon geology</dt><dd>${p.geo.toFixed(1)}% (threshold 69.1)</dd><dt>Albedo</dt><dd>${p.alb.toFixed(2)}</dd><dt>Relief</dt><dd>${p.rel} m</dd><dt>Rain</dt><dd>${p.rain.toFixed(2)} mm/d</dd><dt>Nearest site</dt><dd>${nf(+p.near.toFixed(0))} km</dd></dl>
+        ${p.novel?'<span class="flag">★ Novel candidate · field-verify</span>':`<p style="color:var(--fg-2)">Not flagged: ${p.near<25?'closer than 25 km to a registry site':'geology index below the 69.1% threshold'}.</p>`}`
+        : `<dl style="margin-top:16px"><dt>Nearest site</dt><dd>${nf(+s.near.toFixed(0))} km</dd></dl><p style="color:var(--fg-2)">Scored in the run, but outside the printed top 12. Full values are in <span class="mono">cavesight_discovery_scan.csv</span>.</p>`}
+      <p>A grid point inside a pre-registered box, chosen before any data was fetched. A candidate for a closer look, not a confirmed cave.</p>
+      <div class="links">${p?addBtn(s.id):''}<a class="btn sm" href="${worldview(s.lat,s.lon)}" target="_blank" rel="noopener">Worldview ↗</a></div>`;
+  } else if(kind==='region'){
+    const pts=SCAN.filter(sp=>sp.reg===s.id), pr=pts.filter(sp=>sp.pr);
+    el.innerHTML=`${x}<span class="kind"><i class="sym box" style="display:inline-block"></i>Scan region · ${s.kind==='sand'?'sand scan-control':'volcanic province'}</span><h4>${s.label}</h4>
+      <div class="where">${s.lat[0].toFixed(2)}…${s.lat[1].toFixed(2)}° · ${s.lon[0].toFixed(2)}…${s.lon[1].toFixed(2)}°</div>
+      <dl style="margin-top:16px"><dt>Grid points</dt><dd>6 (2 × 3)</dd><dt>In printed top 12</dt><dd>${pr.length}</dd><dt>Novel flagged</dt><dd>${pr.filter(sp=>sp.pr.novel).length}${pr.length?'':' printed'}</dd>${pr.length?`<dt>Best ${TSHORT[aTarget]}</dt><dd>${Math.max(...pr.map(sp=>sp.pr[aTarget])).toFixed(1)}%</dd>`:''}</dl>
+      <p>${s.kind==='sand'?'A sand desert scanned as a control: if the engine is working, it should score low here.':'A volcanic province with no registry site inside it, so anything flagged here is new ground.'}</p>`;
+  }
+  const c=$('adClose'); if(c) c.addEventListener('click', ()=>{ aSel=null; refreshIcons(); renderDetail(); });
+}
+function atlasSelect(kind, item){
+  aSel={kind, item, id:item.id}; refreshIcons(); renderDetail();
+  if(kind==='primary') select(item.id, {});
+  if(kind!=='region') amap.panTo([item.lat, item.lon], {animate:true});
+}
+buildAtlasMarkers();
+['primary','bench','scan','regions'].forEach(k=>AL[k].addTo(amap));
+ 
+/* ================= COMPARE · head to head ================= */
+const ENT = {};
+SITES.forEach(s=>ENT[s.id]={key:s.id, kind:'primary', name:s.name, sub:`${CAT[s.cat].label} · ${s.sub}`, cat:s.cat, lat:s.lat, lon:s.lon, off:s.off,
+  f:{albedo:s.albedo, relief:s.relief, slope:s.slope, swing:s.swing, rain:s.rain, solar:s.solar, sd:s.sd}, t2m:s.t2m, mc:s.mc, use:s.use, qa:s.qa});
+BENCH.forEach(b=>ENT[b.id]={key:b.id, kind:'bench', name:b.name, sub:`Benchmark analog · ${b.sub}`, lat:b.lat, lon:b.lon, off:b.off,
+  f:{albedo:b.albedo, relief:b.relief, slope:b.slope, solar:b.solar}, t2m:b.t2m, cold:b.cold, use:b.use, qa:b.qa});
+SCAN.filter(sp=>sp.pr).forEach(sp=>{ const p=sp.pr, lab=REGIONS[sp.reg].label.split(',')[0];
+  ENT[sp.id]={key:sp.id, kind:'scan', name:`${lab} · scan ${sp.id.slice(-2)}`, sub:`${p.novel?'Novel candidate':'Scan point, not flagged'} · ${fmtLL(sp.lat,sp.lon)}`, lat:sp.lat, lon:sp.lon,
+    off:{Moon:p.Moon, Mars:p.Mars, Polar:p.Polar}, f:{albedo:p.alb, relief:p.rel, slope:Math.atan(p.rel/150)*180/Math.PI, rain:p.rain}, near:p.near, novel:p.novel, geoPrinted:p.geo,
+    use:p.novel?'Candidate for Phase-2 field verification (thermal buffering, EMIT mineralogy).':'Scored, but not flagged by the novelty rule.', qa:''}; });
+ 
+const FEAT_ROWS = [
+  ['albedo','Bare-earth albedo', v=>v.toFixed(2)], ['relief','Local relief', v=>v.toFixed(0)+' m'], ['slope','Rim slope', v=>v.toFixed(1)+'°'],
+  ['swing','Day–night swing', v=>v.toFixed(1)+' °C'], ['rain','Precipitation', v=>v.toFixed(2)+' mm/d'], ['solar','Solar irradiance', v=>v.toFixed(2)+' kWh'], ['sd','Albedo monthly SD', v=>v.toFixed(3)]
+];
+const PILLAR_FEATS = {reg:['albedo'], topo:['relief','slope'], env:['swing','rain','solar','sd']};
+const PILLAR_NAME = {reg:'regolith', topo:'topography', env:'environment'};
+function partScore(e, t){
+  const S=SCALE[t], f=e.f, has=k=>f[k]!=null, dz={};
+  FEATS.forEach(k=>{ if(has(k)) dz[k]=(f[k]-S.m[k])/S.sd[k]-S.zt[k]; });
+  const reg = has('albedo') ? 100*Math.exp(-0.55*Math.abs(dz.albedo)) : null;
+  const topo = has('relief')&&has('slope') ? 100*Math.exp(-0.35*Math.sqrt((dz.relief**2+dz.slope**2)/2)) : null;
+  const env = PILLAR_FEATS.env.every(has) ? 100*Math.exp(-0.45*Math.sqrt(PILLAR_FEATS.env.reduce((a,k)=>a+dz[k]**2,0)/4)) : null;
+  return {reg, topo, env, geo: reg!=null&&topo!=null ? Math.sqrt(reg*topo) : null, envIdx:env, dz, total:e.off[t]};
+}
+const bestOf = e => ['Moon','Mars','Polar'].reduce((a,b)=>e.off[b]>e.off[a]?b:a,'Moon');
+const rankAmong8 = (e,t) => e.kind==='primary' ? SITES.slice().sort((a,b)=>b.off[t]-a.off[t]).findIndex(x=>x.id===e.key)+1 : null;
+ 
+var cSet=['SITE_01','SITE_04'], cFocus='SITE_01', cRows='all';
+var SLOTS=['--s1','--s2','--s3'];
+function inCompare(k){ return (cSet||[]).includes(k); }
+function slotVar(k){ return ["--s1","--s2","--s3"][Math.max(0,(cSet||[]).indexOf(k))]; }
+const slotCol = k => cssv(slotVar(k));
+const shortN = e => e.kind==='scan' ? e.name : shortName(e.name);
+const addBtn = k => `<button class="btn sm ${inCompare(k)?'':'solid'}" type="button" data-addc="${k}">${inCompare(k)?'✓ In comparison':'+ Add to compare'}</button>`;
+ 
+function toggleCompare(k, opts={}){
+  if(!ENT[k]) return;
+  if(inCompare(k)){
+    cSet=cSet.filter(x=>x!==k);
+    if(!opts.quiet) toast(`Removed ${shortN(ENT[k])} from the comparison.`);
+  } else {
+    let msg;
+    if(cSet.length>=3){ const out=cSet.pop(); msg=`Comparison holds 3 sites: replaced ${shortN(ENT[out])} with ${shortN(ENT[k])}.`; }
+    cSet.push(k); cFocus=k;
+    if(!opts.quiet) toast(msg || `Added ${shortN(ENT[k])} to the comparison (${cSet.length} of 3).`);
+  }
+  if(!cSet.includes(cFocus)) cFocus=cSet[0]||null;
+  renderCompare(); renderReg(); refreshPopups();
+  if(aSel) renderDetail();
+}
+function refreshPopups(){ SITES.forEach(s=>markers[s.id].setPopupContent(popupHtml(s))); }
+document.addEventListener('click', e=>{
+  const b=e.target.closest('[data-addc]'); if(!b) return;
+  e.preventDefault(); e.stopPropagation(); toggleCompare(b.dataset.addc);
+});
+ 
+/* target, rows, actions */
+document.querySelectorAll('[data-ctarget]').forEach(btn=>btn.addEventListener('click', ()=>{
+  cTarget=btn.dataset.ctarget; document.querySelectorAll('[data-ctarget]').forEach(b=>b.setAttribute('aria-pressed', b===btn)); renderCompare();
+}));
+var cTarget='Moon';
+const setCTarget = t => { cTarget=t; document.querySelectorAll('[data-ctarget]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.ctarget===t)); };
+document.querySelectorAll('[data-crows]').forEach(btn=>btn.addEventListener('click', ()=>{
+  cRows=btn.dataset.crows; document.querySelectorAll('[data-crows]').forEach(b=>b.setAttribute('aria-pressed', b===btn)); renderTable();
+}));
+$('cAdd').addEventListener('change', e=>{ const k=e.target.value; if(k) toggleCompare(k); e.target.value=''; });
+$('cClear').addEventListener('click', ()=>{ if(!cSet.length) return; cSet=[]; cFocus=null; renderCompare(); renderReg(); refreshPopups(); if(aSel) renderDetail(); toast('Comparison cleared. Add sites from the menu, the presets, the maps or the registry.'); });
+$('cSwap').addEventListener('click', ()=>{ if(cSet.length<2) return toast('Add a second site first.'); cSet.push(cSet.shift()); renderCompare(); renderReg(); toast(`${shortN(ENT[cSet[0]])} is now the reference.`); });
+$('cMap').addEventListener('click', ()=>{
+  if(!cSet.length) return toast('Add a site first.');
+  let pts=cSet.map(k=>[ENT[k].lat, ENT[k].lon]);
+  const lons=pts.map(p=>p[1]); if(Math.max(...lons)-Math.min(...lons)>180) pts=pts.map(([a,b])=>[a, b<0?b+360:b]);
+  $('atlas').scrollIntoView({behavior:'smooth'});
+  setTimeout(()=>{
+    if(pts.length===1) amap.flyTo(pts[0], 6, {duration:1.2}); else amap.flyToBounds(L.latLngBounds(pts).pad(0.35), {duration:1.4, maxZoom:7});
+    const e=ENT[cSet[0]]; const kind=e.kind; const item = kind==='primary'?SITES.find(s=>s.id===e.key):kind==='bench'?BENCH.find(s=>s.id===e.key):SCAN.find(s=>s.id===e.key);
+    aSel={kind, item, id:item.id}; refreshIcons(); renderDetail();
+  }, 600);
+});
+$('cCopy').addEventListener('click', async ()=>{
+  const rows=[...$('cTable').querySelectorAll('tr')].filter(r=>!r.classList.contains('hide')).map(r=>[...r.children].map(c=>`"${c.innerText.replace(/\s*\n\s*/g,' ').replace(/●/g,'').trim()}"`).join(','));
+  try{ await navigator.clipboard.writeText(rows.join('\n')); toast('Comparison copied as CSV.'); }catch(e){ toast('Clipboard is blocked here. Select the table and copy it manually.'); }
+});
+const PRESETS = [
+  ['Anchor vs runner-up', ['SITE_01','SITE_04'], 'Moon'],
+  ['Why H1 fails', ['SITE_07','SITE_05','SITE_02'], 'Moon'],
+  ['New candidate vs anchor', ['SCAN_Harrat_Khaybar_SA_05','SITE_01'], 'Moon'],
+  ['Lava tube vs classic analog', ['SITE_06','SITE_16'], 'Polar'],
+  ['Mars: El Pinacate vs Death Valley', ['SITE_02','SITE_16','SITE_13'], 'Mars'],
+  ['Cold check: Haughton vs McMurdo', ['SITE_14','SITE_15'], 'Polar']
+];
+PRESETS.forEach(([n,keys,t])=>{ const b=document.createElement('button'); b.type='button'; b.textContent=n;
+  b.addEventListener('click', ()=>{ cSet=keys.slice(); cFocus=keys[0]; setCTarget(t); renderCompare(); renderReg(); refreshPopups(); if(aSel) renderDetail(); });
+  $('cPresets').appendChild(b); });
+$('cTrayGo').addEventListener('click', ()=>$('compare').scrollIntoView({behavior:'smooth'}));
+let compareInView=false;
+if('IntersectionObserver' in window) new IntersectionObserver(es=>es.forEach(e=>{ compareInView=e.isIntersecting; updateTray(); }), {threshold:0.05}).observe($('compare'));
+function updateTray(){
+  $('cTray').classList.toggle('show', cSet.length>0 && !compareInView);
+  $('cTrayDots').innerHTML=cSet.map(k=>`<i style="--c:var(${slotVar(k)})"></i>`).join('');
+  $('cTrayText').textContent = cSet.length ? `Comparing ${cSet.map(k=>shortN(ENT[k])).join(' · ')}` : '';
+}
+ 
+/* renderers */
+function renderPicked(){
+  $('cPicked').innerHTML = cSet.length ? cSet.map((k,i)=>{ const e=ENT[k];
+    return `<span class="cpick ${i===0?'ref':''}" style="--c:var(${SLOTS[i]})" data-focus="${k}" title="Open deep dive"><i></i>${shortN(e)} <small>${e.kind==='primary'?CAT[e.cat].short:e.kind==='bench'?'Benchmark':'Scan'}</small>${i===0&&cSet.length>1?'<span class="refb">Ref</span>':''}<button class="x" type="button" data-addc="${k}" aria-label="Remove ${e.name}">✕</button></span>`; }).join('')
+    : `<span class="cempty">Nothing selected yet. Pick a preset below, or add a site from the menu.</span>`;
+  $('cPicked').querySelectorAll('[data-focus]').forEach(el=>el.addEventListener('click', e=>{ if(e.target.closest('.x')) return; cFocus=el.dataset.focus; renderDeep(); renderCards(); $('deep').scrollIntoView({behavior:'smooth', block:'nearest'}); }));
+  const opt = (k,label) => cSet.includes(k) ? '' : `<option value="${k}">${label}</option>`;
+  $('cAdd').innerHTML = `<option value="">${cSet.length>=3?'+ Replace a site…':'+ Add a site'} (${cSet.length} of 3)</option>
+    <optgroup label="Primary sites">${SITES.slice().sort((a,b)=>a.rank-b.rank).map(s=>opt(s.id, `#${s.rank} ${s.name}`)).join('')}</optgroup>
+    <optgroup label="Benchmark analogs">${BENCH.map(b=>opt(b.id, b.name)).join('')}</optgroup>
+    <optgroup label="Scan candidates (printed)">${SCAN.filter(sp=>sp.pr).sort((a,b)=>b.pr.Moon-a.pr.Moon).map(sp=>opt(sp.id, `${ENT[sp.id].name}${sp.pr.novel?' ★':''}`)).join('')}</optgroup>`;
+}
+function renderRadar(){
+  const t=cTarget, fg2=cssv('--fg-2');
+  const ds=[{label:TNAME[t]+' target', data:[100,100,100,100,100], borderDash:[5,4], pointRadius:2.5, borderWidth:1.3, backgroundColor:'transparent', borderColor:fg2, pointBackgroundColor:fg2}];
+  cSet.forEach(k=>{ const e=ENT[k], p=partScore(e,t), c=slotCol(k), sim=f=>p.dz[f]!=null?100*Math.exp(-DECAY[f]*Math.abs(p.dz[f])):null;
+    ds.push({label:shortN(e), data:[p.reg, p.topo, sim('rain'), sim('solar'), sim('swing')], borderColor:c, pointBackgroundColor:c, backgroundColor:c+(k===cFocus?'30':'14'), borderWidth:k===cFocus?2.4:1.6, pointRadius:k===cFocus?4:3, spanGaps:false}); });
+  radar.data.datasets=ds; radar.update();
+}
+function renderCards(){
+  const t=cTarget, items=cSet.map(k=>ENT[k]).sort((a,b)=>b.off[t]-a.off[t]), lead=items[0];
+  $('hCards').innerHTML = items.map((e,i)=>{ const r=rankAmong8(e,t), d=lead.off[t]-e.off[t];
+    return `<div class="hcard ${e.key===cFocus?'focus':''}" style="--c:var(${slotVar(e.key)})" data-focus="${e.key}" tabindex="0" role="button" aria-label="Deep dive on ${e.name}">
+      <div class="pos"><b>${i+1}</b></div>
+      <div class="nm"><b>${e.name}</b><small>${r?`#${r} of 8 primary sites`:e.kind==='bench'?'Benchmark · scored, not tested':'Scan point · candidate'} · best target ${TSHORT[bestOf(e)]}</small></div>
+      <div class="sc"><b>${e.off[t].toFixed(1)}</b><small>${i===0?(items.length>1?'leader':TNAME[t]):`−${d.toFixed(1)} pts`}</small></div>
+      <div class="gbar"><i style="width:${e.off[t]}%"></i></div></div>`; }).join('') || '';
+  $('hCards').querySelectorAll('[data-focus]').forEach(el=>{ const go=()=>{ cFocus=el.dataset.focus; renderDeep(); renderCards(); renderRadar(); }; el.addEventListener('click', go); el.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); } }); });
+}
+function verdict(){
+  const t=cTarget, T=tl(t), items=cSet.map(k=>ENT[k]).sort((a,b)=>b.off[t]-a.off[t]);
+  if(!items.length) return `<span class="vk">Verdict</span>Pick two or three sites to see who fits the ${T} better, and why.`;
+  const L=items[0], Lp=partScore(L,t), notes=[];
+  if(items.length===1){
+    return `<span class="vk">Verdict</span><b>${L.name}</b> scores <b>${L.off[t].toFixed(1)}%</b> against the ${T}; its best target is the ${tl(bestOf(L))} (${L.off[bestOf(L)].toFixed(1)}%). Add a second site to compare.`;
+  }
+  let head = `<b>${L.name}</b> fits the ${T} best at <b>${L.off[t].toFixed(1)}%</b>, `+items.slice(1).map(O=>`${(L.off[t]-O.off[t]).toFixed(1)} points ahead of ${shortN(O)}`).join(' and ')+'.';
+  const margin=L.off[t]-items[1].off[t];
+  if(margin<2) head += ` That is <b>too close to call</b>.`;
+  items.slice(1).forEach(O=>{
+    const Op=partScore(O,t), diffs=['reg','topo','env'].filter(k=>Lp[k]!=null&&Op[k]!=null).map(k=>[k, Lp[k]-Op[k]]);
+    if(!diffs.length) return;
+    const big=diffs.slice().sort((a,b)=>Math.abs(b[1])-Math.abs(a[1]))[0];
+    const [pk, dv]=big, winner=dv>=0?L:O, loser=dv>=0?O:L, Wp=dv>=0?Lp:Op, Lsp=dv>=0?Op:Lp;
+    const feats=PILLAR_FEATS[pk].filter(f=>Wp.dz[f]!=null&&Lsp.dz[f]!=null).sort((a,b)=>(Math.abs(Lsp.dz[b])-Math.abs(Wp.dz[b]))-(Math.abs(Lsp.dz[a])-Math.abs(Wp.dz[a])));
+    const fr=FEAT_ROWS.find(r=>r[0]===feats[0]);
+    notes.push(`Biggest gap between ${shortN(L)} and ${shortN(O)}: the <b>${PILLAR_NAME[pk]} pillar</b>, won by ${shortN(winner)} (${(dv>=0?Lp:Op)[pk].toFixed(1)} vs ${(dv>=0?Op:Lp)[pk].toFixed(1)})`+(fr?`, mostly from ${fr[1].toLowerCase()}: ${fr[2](winner.f[fr[0]])} vs ${fr[2](loser.f[fr[0]])} (target ${fr[2](REFS[t][fr[0]])}).`:'.'));
+    if(dv>=0) diffs.filter(([k,v])=>v<0).forEach(([k,v])=>notes.push(`${shortN(O)} is still closer on <b>${PILLAR_NAME[k]}</b> (${Op[k].toFixed(1)} vs ${Lp[k].toFixed(1)}).`));
+    else { const lw=diffs.filter(([k,v])=>v>0); if(lw.length) notes.push(`${shortN(L)} still comes out ahead overall thanks to `+lw.map(([k])=>`<b>${PILLAR_NAME[k]}</b> (${Lp[k].toFixed(1)} vs ${Op[k].toFixed(1)})`).join(' and ')+'.'); }
+    if(t==='Moon' && L.mc && O.mc){
+      const [a1,a2]=L.mc.ci.split('–').map(Number), [b1,b2]=O.mc.ci.split('–').map(Number);
+      notes.push(Math.max(a1,b1)<=Math.min(a2,b2) ? `Monte Carlo rank ranges overlap (${L.mc.ci} vs ${O.mc.ci}), so this order is <b>not settled</b> under measurement noise.` : `Monte Carlo rank ranges do not overlap (${L.mc.ci} vs ${O.mc.ci}): the order <b>holds</b> under measurement noise.`);
+    }
+  });
+  items.filter(e=>bestOf(e)!==t).forEach(e=>notes.push(`${shortN(e)} actually fits the <b>${tl(bestOf(e))}</b> better (${e.off[bestOf(e)].toFixed(1)}%).`));
+  items.filter(e=>partScore(e,t).env==null).forEach(e=>notes.push(`${shortN(e)}: the environment pillar can't be rebuilt here because some climate readings are not in the printout; its composite is the notebook's value.`));
+  if(items.some(e=>e.kind==='bench')) notes.push('Benchmarks are scored on the same scale but are not part of any hypothesis test.');
+  if(items.some(e=>e.kind==='scan')) notes.push('Scan points are candidates for field checks, not confirmed caves.');
+  if(items.some(e=>e.cold)) notes.push(`Cold check (annual mean below 0 °C, reported, not scored): ${items.filter(e=>e.kind==='bench').map(e=>`${shortN(e)} ${e.cold?'passes':'does not'} (${e.t2m.toFixed(1)} °C)`).join(', ')}.`);
+  return `<span class="vk">Verdict · ${TNAME[t]}</span>${head}<ul>${notes.map(n=>`<li>${n}</li>`).join('')}</ul>`;
+}
+function renderTable(){
+  const t=cTarget, items=cSet.map(k=>ENT[k]), P=items.map(e=>partScore(e,t));
+  $('ctTarget').textContent=TNAME[t].toUpperCase();
+  if(!items.length){ $('cTable').innerHTML='<tbody><tr><td class="k">Add sites to fill this table.</td></tr></tbody>'; return; }
+  const head=`<thead><tr><th>Feature</th><th>Target<small>${TNAME[t]}</small></th>${items.map(e=>`<th class="site" style="--c:var(${slotVar(e.key)})" data-focus="${e.key}"><span><i></i>${shortN(e)}</span><small>${e.kind==='primary'?CAT[e.cat].short:e.kind==='bench'?'Benchmark':'Scan'}</small></th>`).join('')}</tr></thead>`;
+  const rows=[], spread=[];
+  const scoreRow=(label, vals, fmt=v=>v.toFixed(1), always=false)=>{
+    const ok=vals.filter(v=>v!=null), best=ok.length>1?Math.max(...ok):null;
+    rows.push({always, spread: ok.length>1 ? (Math.max(...ok)-Math.min(...ok))/8 : 0,
+      html:`<td class="k">${label}</td><td class="tg">100</td>`+vals.map((v,i)=>v==null?'<td class="na">—</td>':`<td class="${v===best?'win':''}" style="--c:var(${slotVar(items[i].key)})"><span class="v">${fmt(v)}</span><span class="mb"><i style="width:${v}%"></i></span></td>`).join('')});
+  };
+  rows.push({grp:true, html:`<td colspan="${items.length+2}">Scores against the ${tl(t)}</td>`});
+  scoreRow('Composite', items.map(e=>e.off[t]), v=>v.toFixed(1), true);
+  scoreRow('Regolith pillar', P.map(p=>p.reg)); scoreRow('Topography pillar', P.map(p=>p.topo)); scoreRow('Environment pillar', P.map(p=>p.env));
+  scoreRow('Geology index', P.map(p=>p.geo)); 
+  rows.push({always:false, spread:0, html:`<td class="k">Rank among the 8</td><td class="tg">—</td>`+items.map(e=>{ const r=rankAmong8(e,t); return r?`<td><span class="v">#${r}</span></td>`:'<td class="na">not ranked</td>'; }).join('')});
+  rows.push({always:true, spread:0, html:`<td class="k">Best of three targets</td><td class="tg">—</td>`+items.map(e=>`<td><span class="v">${TSHORT[bestOf(e)]} ${e.off[bestOf(e)].toFixed(1)}</span></td>`).join('')});
+  if(t==='Moon') rows.push({always:false, spread:0, html:`<td class="k">Monte Carlo rank, 90%</td><td class="tg">—</td>`+items.map(e=>e.mc?`<td><span class="v">${e.mc.ci}</span><span class="d">P(#1) ${e.mc.p1}%</span></td>`:'<td class="na">—</td>').join('')});
+  rows.push({grp:true, html:`<td colspan="${items.length+2}">Readings vs the target</td>`});
+  FEAT_ROWS.forEach(([k,label,fmt])=>{
+    const tv=REFS[t][k], vals=items.map(e=>e.f[k]), ok=vals.map((v,i)=>[v,i]).filter(([v])=>v!=null);
+    const dist=ok.map(([v,i])=>[Math.abs(v-tv),i]), bestD=dist.length>1?Math.min(...dist.map(d=>d[0])):null;
+    const zs=ok.map(([v])=>v/SCALE[t].sd[k]);
+    rows.push({always:false, spread: zs.length>1?Math.max(...zs)-Math.min(...zs):0,
+      html:`<td class="k">${label}</td><td class="tg">${fmt(tv)}</td>`+vals.map((v,i)=>v==null?'<td class="na">—</td>':`<td class="${bestD!=null&&Math.abs(Math.abs(v-tv)-bestD)<1e-9?'win':''}" style="--c:var(${slotVar(items[i].key)})"><span class="v">${fmt(v)}</span><span class="d">${v-tv>=0?'+':'−'}${fmt(Math.abs(v-tv)).replace(/ .*/,'')} from target</span></td>`).join('')});
+  });
+  rows.push({grp:true, html:`<td colspan="${items.length+2}">Context</td>`});
+  rows.push({always:false, spread:0, html:`<td class="k">Mean air temperature</td><td class="tg">${t==='Polar'?'&lt; 0 °C':'—'}</td>`+items.map(e=>e.t2m!=null?`<td><span class="v">${e.t2m.toFixed(1)} °C</span>${t==='Polar'?`<span class="d">${e.t2m<0?'cold check passes':'cold check fails'}</span>`:''}</td>`:'<td class="na">not printed</td>').join('')});
+  rows.push({always:false, spread:0, html:`<td class="k">Location</td><td class="tg">—</td>`+items.map(e=>`<td><span class="v">${e.lat.toFixed(2)}, ${e.lon.toFixed(2)}</span>${e.near!=null?`<span class="d">${Math.round(e.near).toLocaleString('en-US')} km from nearest site</span>`:''}</td>`).join('')});
+  const keep = new Set(); if(cRows==='diff'){ rows.filter(r=>!r.grp&&!r.always&&r.spread>0).sort((a,b)=>b.spread-a.spread).slice(0,5).forEach(r=>keep.add(r)); }
+  $('cTable').innerHTML = head + '<tbody>' + rows.map(r=>`<tr class="${r.grp?'grp':''} ${cRows==='diff'&&!r.grp&&!r.always&&!keep.has(r)?'hide':''}">${r.html}</tr>`).join('') + '</tbody>';
+  $('cTable').querySelectorAll('th[data-focus]').forEach(th=>th.addEventListener('click', ()=>{ cFocus=th.dataset.focus; renderDeep(); renderCards(); renderRadar(); $('deep').scrollIntoView({behavior:'smooth', block:'nearest'}); }));
+}
+function renderDeep(){
+  const e=ENT[cFocus];
+  $('deep').style.display = e ? '' : 'none';
+  if(!e) return;
+  const t=cTarget, p=partScore(e,t), c=slotCol(e.key);
+  $('deepTabs').innerHTML = cSet.map(k=>`<button type="button" data-dfocus="${k}" aria-pressed="${k===cFocus}">${shortN(ENT[k])}</button>`).join('');
+  $('deepTabs').querySelectorAll('[data-dfocus]').forEach(b=>b.addEventListener('click', ()=>{ cFocus=b.dataset.dfocus; renderDeep(); renderCards(); renderRadar(); }));
+  $('scoreBox').style.setProperty('--c', c);
+  $('cScore').innerHTML=e.off[t].toFixed(1)+'<small>%</small>';
+  $('cLabel').textContent='Composite · '+TNAME[t];
+  $('cName').textContent=e.name;
+  const r=rankAmong8(e,t);
+  $('cRankLabel').textContent = r ? 'Rank' : 'Status';
+  $('cRank').textContent = r ? `#${r} / 8` : (e.kind==='bench'?'Benchmark':'Scan');
+  $('mcRow').innerHTML = e.mc && t==='Moon'
+    ? `<span>Monte Carlo · P(rank 1)<b>${e.mc.p1}%</b></span><span>Median rank<b>${e.mc.med}</b></span><span>90% rank<b>${e.mc.ci}</b></span><span>Score 5–95%<b>${e.mc.lo.toFixed(1)}–${e.mc.hi.toFixed(1)}</b></span>`
+    : `<span>Best target<b>${TNAME[bestOf(e)]} · ${e.off[bestOf(e)].toFixed(1)}%</b></span><span>${e.mc?'Monte Carlo was run for the Moon target only.':e.kind==='bench'?`Mean air temp<b>${e.t2m.toFixed(1)} °C</b>`:`Nearest registry site<b>${Math.round(e.near).toLocaleString('en-US')} km</b>`}</span>`;
+  const ref=REFS[t], fv=k=>e.f[k]!=null?e.f[k]:null;
+  $('pillars').innerHTML=[
+    ['Regolith pillar', p.reg, fv('albedo')!=null?`albedo ${e.f.albedo.toFixed(2)} vs ${ref.albedo.toFixed(2)}`:'albedo not available'],
+    ['Topography pillar', p.topo, fv('relief')!=null?`relief ${e.f.relief} m · slope ${e.f.slope.toFixed(1)}° vs ${ref.relief} m · ${ref.slope}°`:'terrain not available'],
+    ['Environment pillar', p.env, p.env!=null?`swing ${e.f.swing.toFixed(1)} °C · rain ${e.f.rain.toFixed(2)} · solar ${e.f.solar.toFixed(2)} · SD ${e.f.sd.toFixed(3)}`:'some climate readings are not in the printout'],
+    ['Composite (notebook)', e.off[t], p.geo!=null?`Geology index ${p.geo.toFixed(1)}${p.env!=null?` · Environment index ${p.env.toFixed(1)}`:''}`:'']
+  ].map(([k,v,sub],i)=>`<div class="pill" style="--c:${i===3?cssv('--fg'):c}"><div class="top"><span>${k}</span><b>${v==null?'—':v.toFixed(1)+'%'}</b></div><div class="bar"><i data-w="${v==null?0:v}"></i></div><div class="sub">${sub}</div></div>`).join('');
+  requestAnimationFrame(()=>document.querySelectorAll('#pillars .bar i').forEach(i=>i.style.width=i.dataset.w+'%'));
+  $('deep').style.setProperty('--c', c);
+  const avail=Object.keys(NICE).filter(k=>p.dz[k]!=null).sort((a,b)=>Math.abs(p.dz[a])-Math.abs(p.dz[b]));
+  const fmt=k=>`${NICE[k][0]} ${NICE[k][1](e.f[k])} <span>(${TSHORT[t]} ${NICE[k][1](ref[k])})</span>`;
+  $('drvTag').textContent=`Physical drivers · ${e.kind==='primary'?CAT[e.cat].label:e.kind==='bench'?'Benchmark analog':'Scan point'}`;
+  $('drvLine').innerHTML = p.geo!=null&&p.env!=null ? `Score driven mainly by <b>${p.geo>p.env?'geology':'environment'}</b> (Geology ${p.geo.toFixed(0)} · Environment ${p.env.toFixed(0)}).` : `Built from the ${avail.length} of 7 readings available in the printout.`;
+  $('drivers').innerHTML = avail.slice(0,2).map(k=>`<li><b>Closest:</b> ${fmt(k)}</li>`).join('') + avail.slice(-2).reverse().filter(k=>!avail.slice(0,2).includes(k)).map(k=>`<li><b>Largest gap:</b> ${fmt(k)}</li>`).join('');
+  $('usecase').innerHTML=`<b>What this site is good for.</b> ${e.use}${e.qa?` <span style="color:var(--fg-2)">QA: ${e.qa}</span>`:''}`;
+}
+function renderCompare(){
+  if(cFocus && !cSet.includes(cFocus)) cFocus=cSet[0]||null;
+  if(!cFocus) cFocus=cSet[0]||null;
+  renderPicked(); renderRadar(); renderCards(); $('cVerdict').innerHTML=verdict(); renderTable(); renderDeep(); updateTray();
+}
+ 
+/* ================= THEME TOGGLE ================= */
+const SUN='<circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/>';
+const MOON='<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/>';
+function applyThemeUi(){
+  const dark=theme()==='dark';
+  $('themeIcon').innerHTML=dark?MOON:SUN;
+  $('themeBtn').setAttribute('aria-label', dark?'Switch to light mode':'Switch to dark mode');
+  earth.retheme(); atlasBase.retheme();
+  AL.regions.eachLayer(r=>{ const k=Object.keys(REGIONS).find(id=>r.getTooltip().getContent()===REGIONS[id].label); const col=REGIONS[k].kind==='sand'?cssv('--c-ctrl'):cssv('--c-volc'); r.setStyle({color:col, fillColor:col}); });
+  themeRadar(); renderCompare(); renderReg(); simRender(); renderHeat(); renderAtlasHeat(); renderDetail();
+}
+$('themeBtn').addEventListener('click', ()=>{
+  root.dataset.theme = theme()==='light' ? 'dark' : 'light';
+  try{ localStorage.setItem('cavesight-theme', root.dataset.theme); }catch(e){}
+  applyThemeUi();
+});
+ 
+/* ================= NAV, PROGRESS, REVEAL ================= */
+const nav=$('nav'), prog=$('progress');
+function onScroll(){
+  const h=document.documentElement; const p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);
+  prog.style.width=(p*100).toFixed(2)+'%'; nav.classList.toggle('scrolled', h.scrollTop>20);
+}
+addEventListener('scroll', onScroll, {passive:true}); onScroll();
+$('menuBtn').addEventListener('click', ()=>{ const o=$('links').classList.toggle('open'); $('menuBtn').setAttribute('aria-expanded', o); });
+document.querySelectorAll('#links a').forEach(a=>a.addEventListener('click', ()=>{ $('links').classList.remove('open'); $('menuBtn').setAttribute('aria-expanded', false); }));
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.08, rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  const links=[...document.querySelectorAll('#links a')];
+  const so=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ links.forEach(a=>a.classList.toggle('on', a.getAttribute('href')==='#'+e.target.id)); } }), {rootMargin:'-45% 0px -50% 0px'});
+  document.querySelectorAll('main section[id]').forEach(s=>so.observe(s));
+} else document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));
+ 
+/* ================= INIT ================= */
+themeRadar();
+renderTri();
+renderReg();
+select('SITE_01', {fly:false});
+renderCompare();
+simRender();
+renderDetail();
+labelZoom();
+$('themeIcon').innerHTML = theme()==='light' ? SUN : MOON;
+setTimeout(()=>{ map.invalidateSize(); pmap.invalidateSize(); amap.invalidateSize(); }, 400);
+ 
+</script>
+</body>
+</html>
+ 
