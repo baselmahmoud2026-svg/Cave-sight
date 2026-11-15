@@ -1127,6 +1127,85 @@ html[data-theme="light"] .lt-img{filter:grayscale(1) brightness(1.08) contrast(.
 .mcrow b{font-family:var(--mono);font-weight:500;color:var(--fg);margin-left:4px}
 .drvline{margin:10px 0 0;font-size:13.5px;color:var(--body)}
 
+
+/* COMPARE · head to head */
+:root{--s1:#f1f1f1;--s2:#e0894a;--s3:#6f93bd}
+html[data-theme="light"]{--s1:#0b0b0b;--s2:#c8682a;--s3:#3f6f9f}
+.cbar{border-top:1px solid var(--line);padding:22px 0 18px;display:grid;gap:14px}
+.cbar-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.cpicked{display:flex;gap:8px;flex-wrap:wrap;align-items:center;min-height:40px}
+.cpick{display:inline-flex;align-items:center;gap:10px;padding:8px 8px 8px 14px;border-radius:999px;border:1px solid var(--c);font-size:13px;color:var(--fg);background:color-mix(in srgb,var(--c) 10%,transparent);cursor:pointer;transition:background .2s}
+.cpick:hover{background:color-mix(in srgb,var(--c) 18%,transparent)}
+.cpick i{width:9px;height:9px;border-radius:50%;background:var(--c);flex:none}
+.cpick small{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-2)}
+.cpick .x{width:24px;height:24px;border-radius:50%;border:1px solid var(--line-2);background:transparent;color:var(--fg-2);cursor:pointer;display:grid;place-items:center;font-size:12px}
+.cpick .x:hover{color:var(--fg);border-color:var(--fg)}
+.cpick.ref{box-shadow:0 0 0 1px var(--c)}
+.cpick .refb{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--c);border:1px solid var(--c);border-radius:999px;padding:2px 6px}
+.cempty{font-size:13px;color:var(--fg-2)}
+.cadd select{border-style:dashed;padding:9px 14px;min-width:220px}
+.cactions{display:flex;gap:8px;flex-wrap:wrap}
+.cpresets{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.cpresets .label{margin-right:4px}
+.cpresets button{border:1px solid var(--line);background:transparent;color:var(--body);font:500 12px var(--sans);padding:7px 12px;border-radius:999px;cursor:pointer;transition:color .2s,border-color .2s}
+.cpresets button:hover{color:var(--fg);border-color:var(--fg)}
+.hcards{display:grid;gap:10px}
+.hcard{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:18px;position:relative;overflow:hidden;cursor:pointer;transition:border-color .2s,transform .2s}
+.hcard:hover{border-color:var(--c);transform:translateY(-1px)}
+.hcard.focus{border-color:var(--c)}
+.hcard::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c)}
+.hcard .pos{font-family:var(--mono);font-size:12px;color:var(--fg-2);width:26px}
+.hcard .pos b{display:block;font-size:20px;color:var(--fg);font-weight:500}
+.hcard .nm b{display:block;font-size:16px;letter-spacing:-.02em;font-weight:600}
+.hcard .nm small{font-size:11px;color:var(--fg-2)}
+.hcard .sc{text-align:right}
+.hcard .sc b{display:block;font-size:30px;font-weight:700;letter-spacing:-.05em;line-height:1;color:var(--c)}
+.hcard .sc small{font-family:var(--mono);font-size:11px;color:var(--fg-2)}
+.hcard .gbar{grid-column:1/-1;height:3px;background:var(--line);border-radius:2px;position:relative;overflow:hidden}
+.hcard .gbar i{position:absolute;left:0;top:0;bottom:0;background:var(--c);transition:width .8s cubic-bezier(.2,.7,.2,1)}
+.verdict-box{margin-top:18px;padding:18px 20px;border-radius:18px;border:1px dashed var(--line-2);font-size:14px;line-height:1.65;color:var(--body)}
+.verdict-box b{color:var(--fg)}
+.verdict-box .vk{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-2);margin-bottom:8px}
+.verdict-box ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.verdict-box li{padding-left:18px;position:relative}
+.verdict-box li::before{content:"→";position:absolute;left:0;color:var(--fg-2)}
+.ctable-wrap{margin-top:clamp(36px,4vw,54px)}
+.ctable-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+table.ctable{width:100%;border-collapse:collapse;min-width:640px}
+.ctable th{text-align:left;font-weight:500;font-size:12.5px;color:var(--fg);padding:12px 10px 12px 0;border-bottom:1px solid var(--line-2);vertical-align:bottom}
+.ctable th.site{cursor:pointer}
+.ctable th.site span{display:flex;align-items:center;gap:8px}
+.ctable th.site i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+.ctable th.site:hover{text-decoration:underline}
+.ctable th small{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-2);font-weight:400;margin-top:2px}
+.ctable td{padding:11px 10px 11px 0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12.5px;color:var(--body);vertical-align:middle}
+.ctable td.k{font-family:var(--sans);font-size:13px;color:var(--fg-2)}
+.ctable td.tg{color:var(--fg-2)}
+.ctable tr.grp td{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-2);padding-top:22px;border-bottom:1px solid var(--line-2)}
+.ctable td .v{color:var(--fg)}
+.ctable td.win .v{font-weight:600}
+.ctable td.win .v::after{content:" ●";color:var(--c);font-size:10px}
+.ctable td .d{display:block;font-size:10.5px;color:var(--fg-2);margin-top:2px}
+.ctable td .mb{display:block;height:2px;background:var(--line);margin-top:6px;max-width:120px;position:relative}
+.ctable td .mb i{position:absolute;left:0;top:0;bottom:0;background:var(--c)}
+.ctable td.na{color:var(--fg-3)}
+.ctable tr.hide{display:none}
+.deep{margin-top:clamp(36px,4vw,54px);border-top:1px solid var(--line);padding-top:22px}
+.deep-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.deep-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,50px)}
+@media (max-width:900px){.deep-grid{grid-template-columns:1fr}}
+.ctray{position:fixed;left:50%;bottom:18px;transform:translate(-50%,140%);z-index:2500;display:flex;align-items:center;gap:12px;padding:8px 8px 8px 16px;border-radius:999px;background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line-2);font-size:13px;color:var(--body);box-shadow:0 18px 50px rgba(0,0,0,.35);transition:transform .4s cubic-bezier(.2,.7,.2,1);max-width:calc(100vw - 24px)}
+.ctray.show{transform:translate(-50%,0)}
+.ctray-dots{display:flex;gap:4px}
+.ctray-dots i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+#cTrayText{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.addc{display:inline-flex;align-items:center;gap:6px}
+.pop .addbtn{margin-top:10px;width:100%;justify-content:center}
+table.reg td.cmpcell{padding:0 4px 0 10px!important;width:44px}
+.cmpt{width:30px;height:30px;border-radius:50%;border:1px solid var(--line-2);background:transparent;color:var(--fg-2);cursor:pointer;font-size:15px;display:grid;place-items:center;transition:all .2s}
+.cmpt:hover{color:var(--fg);border-color:var(--fg)}
+.cmpt[aria-pressed="true"]{background:var(--c,var(--fg));border-color:var(--c,var(--fg));color:var(--bg)}
+
 /* CLOSE + FOOTER */
 .close{padding:clamp(110px,14vw,180px) 0 clamp(90px,10vw,130px);text-align:center;position:relative;overflow:hidden}
 .close .rings{position:absolute;left:50%;top:50%;width:min(900px,120vw);aspect-ratio:1;transform:translate(-50%,-50%);pointer-events:none}
@@ -1146,7 +1225,7 @@ footer a.top:hover{color:var(--fg)}
 .credits{display:flex;flex-wrap:wrap;gap:6px;margin:0 auto;max-width:1280px;padding:0 clamp(20px,5vw,48px) 30px}
 .credits span{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-2);border:1px solid var(--line);border-radius:999px;padding:5px 10px}
 .fineprint{max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,48px) 36px;font-size:11.5px;color:var(--fg-3);line-height:1.6}
-.toast{position:fixed;right:20px;bottom:20px;z-index:3000;max-width:360px;padding:12px 16px;border-radius:14px;background:var(--glass);backdrop-filter:blur(14px);border:1px solid var(--line-2);font-size:12.5px;display:none}
+.toast{position:fixed;right:20px;bottom:84px;z-index:3000;max-width:360px;padding:12px 16px;border-radius:14px;background:var(--glass);backdrop-filter:blur(14px);border:1px solid var(--line-2);font-size:12.5px;display:none}
 .toast.show{display:block}
 </style>
 </head>
@@ -1449,43 +1528,92 @@ footer a.top:hover{color:var(--fg)}
   </div>
 </section>
 
-<!-- 03 COMPARE -->
+<!-- 04 COMPARE -->
 <section class="sec" id="compare">
   <div class="wrap">
     <div class="eyebrow rv">04 / Compare</div>
     <div class="sec-top">
-      <h2 class="h2 rv">Every site,<br><span class="dim">against every target.</span></h2>
-      <p class="lede rv d1">The same five axes the notebook uses. The dashed shape is the target, at 100 on every axis. The solid shape is how close the selected Earth site comes on each axis. Switch the target to see the same site against the Moon pit, Mars or the south pole.</p>
+      <h2 class="h2 rv">Put sites<br><span class="dim">head to head.</span></h2>
+      <p class="lede rv d1">Pick up to three sites (primary sites, benchmarks or scan candidates) and a target. CaveSight overlays them on one radar, says who wins and why, and lines up every reading against the target. You can also add sites from the maps, the atlas or the registry.</p>
     </div>
+
+    <div class="cbar rv">
+      <div class="cbar-row">
+        <div class="cpicked" id="cPicked" aria-live="polite"></div>
+        <label class="cadd"><span class="vh">Add a site to compare</span>
+          <select id="cAdd" aria-label="Add a site to compare"></select>
+        </label>
+      </div>
+      <div class="cbar-row">
+        <div class="seg" role="group" aria-label="Compare target">
+          <button type="button" data-ctarget="Moon" aria-pressed="true">Moon pit</button>
+          <button type="button" data-ctarget="Mars" aria-pressed="false">Mars</button>
+          <button type="button" data-ctarget="Polar" aria-pressed="false">South pole</button>
+        </div>
+        <div class="cactions">
+          <button class="btn sm" type="button" id="cMap">Show on atlas</button>
+          <button class="btn sm" type="button" id="cSwap" title="Change which site is the reference">Swap reference</button>
+          <button class="btn sm" type="button" id="cCopy">Copy table</button>
+          <button class="btn sm" type="button" id="cClear">Clear</button>
+        </div>
+      </div>
+      <div class="cpresets" id="cPresets"><span class="label">Try</span></div>
+    </div>
+
     <div class="cmp rv">
       <div>
-        <div class="cmp-head">
-          <select id="siteSelect" aria-label="Select a site"></select>
-          <div class="seg" role="group" aria-label="Compare target">
-            <button type="button" data-ctarget="Moon" aria-pressed="true">Moon pit</button>
-            <button type="button" data-ctarget="Mars" aria-pressed="false">Mars</button>
-            <button type="button" data-ctarget="Polar" aria-pressed="false">South pole</button>
-          </div>
-        </div>
-        <div class="chartbox"><canvas id="radarChart" role="img" aria-label="Radar chart comparing the selected site with the lunar benchmark"></canvas></div>
-        <p class="small" style="margin-top:10px">Axes as in notebook Cell 13: the Regolith and Topography pillar scores, plus single-feature similarity 100·exp(−0.45·|Δz|) for aridity, solar and thermal swing. Δz is measured on the z-scale fitted to the 8 primary sites plus the target.</p>
+        <div class="chartbox"><canvas id="radarChart" role="img" aria-label="Radar chart overlaying the compared sites on the target"></canvas></div>
+        <p class="small" id="radarNote" style="margin-top:10px">Axes as in notebook Cell 13: Regolith and Topography pillar scores, plus single-feature similarity 100·exp(−0.45·|Δz|) for aridity, solar and thermal swing, on the z-scale of the 8 primary sites plus the target. Gaps in a shape mean that reading is not in the run's printout.</p>
       </div>
-      <div id="diag">
-        <div class="score" id="scoreBox">
-          <div class="big" id="cScore">—</div>
-          <div class="who"><span class="label" id="cLabel">Composite · Moon pit</span><b id="cName">—</b></div>
-          <div class="rank"><span class="label">Blind rank</span><b id="cRank">—</b></div>
+      <div>
+        <div class="hcards" id="hCards"></div>
+        <div class="verdict-box" id="cVerdict" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="ctable-wrap rv">
+      <div class="ctable-head">
+        <span class="idx">FEATURE BY FEATURE · <span id="ctTarget">MOON PIT</span></span>
+        <div class="seg" role="group" aria-label="Table rows">
+          <button type="button" data-crows="all" aria-pressed="true">All rows</button>
+          <button type="button" data-crows="diff" aria-pressed="false">Biggest differences</button>
         </div>
-        <div class="mcrow" id="mcRow"></div>
-        <div class="pillars" id="pillars"></div>
-        <span class="label" id="drvTag">Physical drivers</span>
-        <p class="drvline" id="drvLine"></p>
-        <ul class="drivers" id="drivers"></ul>
-        <div class="usecase" id="usecase"></div>
+      </div>
+      <div class="tablewrap"><table class="ctable" id="cTable"></table></div>
+      <p class="small" style="margin-top:12px">Scores: higher is better, best in each row marked ●. Readings: the value closest to the target is marked ●, and the small number is the distance to the target. Click a site's column header to open its deep dive.</p>
+    </div>
+
+    <div class="deep rv" id="deep">
+      <div class="deep-head">
+        <span class="idx">DEEP DIVE</span>
+        <div class="seg" role="group" aria-label="Deep-dive site" id="deepTabs"></div>
+      </div>
+      <div class="deep-grid">
+        <div id="diag">
+          <div class="score" id="scoreBox">
+            <div class="big" id="cScore">—</div>
+            <div class="who"><span class="label" id="cLabel">Composite · Moon pit</span><b id="cName">—</b></div>
+            <div class="rank"><span class="label" id="cRankLabel">Rank</span><b id="cRank">—</b></div>
+          </div>
+          <div class="mcrow" id="mcRow"></div>
+          <div class="pillars" id="pillars"></div>
+        </div>
+        <div>
+          <span class="label" id="drvTag">Physical drivers</span>
+          <p class="drvline" id="drvLine"></p>
+          <ul class="drivers" id="drivers"></ul>
+          <div class="usecase" id="usecase"></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<div class="ctray" id="cTray" role="region" aria-label="Comparison tray">
+  <span class="ctray-dots" id="cTrayDots"></span>
+  <span id="cTrayText">Comparing</span>
+  <button class="btn sm solid" type="button" id="cTrayGo">Open comparison ↓</button>
+</div>
 
 <!-- 04 REGISTRY -->
 <section class="sec" id="registry">
@@ -1493,7 +1621,7 @@ footer a.top:hover{color:var(--fg)}
     <div class="eyebrow rv">05 / Registry &amp; calculator</div>
     <div class="sec-top">
       <h2 class="h2 rv">Eight blind sites.<br><span class="dim">One scoring rule.</span></h2>
-      <p class="lede rv d1">Sort any column, filter by site type, or click a row to fly to it on the map. Then use the same scoring rule in the calculator to test readings of your own.</p>
+      <p class="lede rv d1">Sort any column, filter by site type, click a row to fly to it on the map, or press + to add it to the comparison. Then use the same scoring rule in the calculator to test readings of your own.</p>
     </div>
     <div class="rv">
       <div class="regtools">
@@ -1512,6 +1640,7 @@ footer a.top:hover{color:var(--fg)}
       <div class="tablewrap">
         <table class="reg" id="regTable">
           <thead><tr>
+            <th class="nosort"><span class="vh">Compare</span></th>
             <th data-k="rank">Rank<span class="arr">↕</span></th>
             <th data-k="name">Site<span class="arr">↕</span></th>
             <th data-k="cat">Type<span class="arr">↕</span></th>
@@ -1773,6 +1902,7 @@ const REFS = {
 };
 const TNAME = {Moon:'Moon pit', Mars:'Mars skylights', Polar:'South pole'};
 const TSHORT = {Moon:'Moon', Mars:'Mars', Polar:'Pole'};
+const tl = t => t==='Polar' ? 'south pole' : TNAME[t];
 const PLACES = {
   moonPit: {body:'moon', target:'Moon', name:'Mare Tranquillitatis Pit', lat:8.3355, lon:33.2220, zoom:5, trek:'https://trek.nasa.gov/moon/',
     text:'Primary target. A pit about 100 m across and 105 m deep, with a conduit about 45 m wide 130–170 m below the surface (Carrer et al. 2024).'},
@@ -1930,7 +2060,8 @@ const popupHtml = s => `<div class="pop"><h4>${s.name}</h4>
   <div class="r"><span>Albedo / SD</span><b>${s.albedo.toFixed(2)} / ${s.sd.toFixed(3)}</b></div>
   <div class="r"><span>Swing · rain</span><b>${s.swing.toFixed(1)} °C · ${s.rain.toFixed(2)} mm/d</b></div>
   <div class="r"><span>Solar · relief</span><b>${s.solar.toFixed(2)} kWh · ${s.relief} m</b></div>
-  <div class="r"><span>Coordinate</span><b>${s.lat.toFixed(4)}, ${s.lon.toFixed(4)}</b></div></div>`;
+  <div class="r"><span>Coordinate</span><b>${s.lat.toFixed(4)}, ${s.lon.toFixed(4)}</b></div>
+  <button class="btn sm addbtn" type="button" data-addc="${s.id}">${inCompare(s.id)?'✓ In comparison':'+ Add to compare'}</button></div>`;
 SITES.forEach(s=>{
   const m=L.marker([s.lat,s.lon], {icon:beaconIcon(s,false), title:s.name, keyboard:true}).bindPopup(popupHtml(s));
   m.on('click', ()=>select(s.id, {fly:true, source:'map'}));
@@ -2026,15 +2157,6 @@ function themeRadar(){
   Object.assign(radar.options.plugins.tooltip, {backgroundColor:cssv('--bg'), titleColor:fg, bodyColor:fg, borderColor:line2, borderWidth:1});
   const d0=radar.data.datasets[0]; d0.borderColor=fg2; d0.pointBackgroundColor=fg2;
 }
-const sel=$('siteSelect');
-SITES.slice().sort((a,b)=>a.rank-b.rank).forEach(s=>{ const o=document.createElement('option'); o.value=s.id; o.textContent=`#${s.rank} · ${s.name}`; sel.appendChild(o); });
-sel.addEventListener('change', ()=>select(sel.value, {fly:true, source:'select'}));
-let cTarget='Moon';
-document.querySelectorAll('[data-ctarget]').forEach(btn=>btn.addEventListener('click', ()=>{
-  cTarget=btn.dataset.ctarget; document.querySelectorAll('[data-ctarget]').forEach(b=>b.setAttribute('aria-pressed', b===btn));
-  if(selectedId) select(selectedId,{});
-}));
-
 /* ================= SELECT (twin maps + compare + registry) ================= */
 let selectedId=null;
 function select(id, opts={}){
@@ -2055,34 +2177,6 @@ function select(id, opts={}){
   $('lsBody').textContent= s.best==='Mars' ? 'Mars target' : s.best==='Polar' ? 'Moon · polar target' : 'Moon target';
   $('lsTarget').textContent=place.name;
   $('lsTargetSub').textContent=`${Math.abs(place.lat).toFixed(4)}° ${place.lat>=0?'N':'S'} · ${Math.abs(place.lon).toFixed(4)}° ${place.lon>=0?'E':'W'}`;
-  // compare
-  const t=cTarget, p=s.sc[t];
-  const ds=radar.data.datasets[1];
-  ds.label=s.name; ds.data=axes(s,t); ds.borderColor=c; ds.pointBackgroundColor=c; ds.backgroundColor=c+'26';
-  radar.data.datasets[0].label=TNAME[t]+' target'; radar.update();
-  if(sel.value!==id) sel.value=id;
-  const tr=SITES.slice().sort((a,b)=>b.off[t]-a.off[t]).findIndex(x=>x.id===id)+1;
-  $('scoreBox').style.setProperty('--c', c);
-  $('cScore').innerHTML=s.off[t].toFixed(1)+'<small>%</small>';
-  $('cLabel').textContent='Composite · '+TNAME[t];
-  $('cName').textContent=s.name;
-  $('cRank').textContent=`#${tr} / 8`;
-  $('mcRow').innerHTML = t==='Moon'
-    ? `<span>Monte Carlo · P(rank 1)<b>${s.mc.p1}%</b></span><span>Median rank<b>${s.mc.med}</b></span><span>90% rank<b>${s.mc.ci}</b></span><span>Score 5–95%<b>${s.mc.lo.toFixed(1)}–${s.mc.hi.toFixed(1)}</b></span>`
-    : `<span>Best target for this site<b>${TNAME[s.best]}</b></span><span>Monte Carlo was run for the Moon target only.</span>`;
-  $('pillars').innerHTML=[
-    ['Regolith pillar', p.reg, `albedo ${s.albedo.toFixed(2)} vs ${REFS[t].albedo.toFixed(2)}`],
-    ['Topography pillar', p.topo, `relief ${s.relief} m · slope ${s.slope.toFixed(1)}° vs ${REFS[t].relief} m · ${REFS[t].slope}°`],
-    ['Environment pillar', p.env, `swing ${s.swing.toFixed(1)} °C · rain ${s.rain.toFixed(2)} · solar ${s.solar.toFixed(2)} · SD ${s.sd.toFixed(3)}`],
-    ['Composite (geometric mean)', p.total, `Geology index ${p.geo.toFixed(1)} · Environment index ${p.envIdx.toFixed(1)} · notebook ${s.off[t].toFixed(t==='Moon'?2:1)}`]
-  ].map(([k,v,sub],i)=>`<div class="pill" style="--c:${i===3?cssv('--fg'):c}"><div class="top"><span>${k}</span><b>${v.toFixed(1)}%</b></div><div class="bar"><i data-w="${v}"></i></div><div class="sub">${sub}</div></div>`).join('');
-  requestAnimationFrame(()=>document.querySelectorAll('#pillars .bar i').forEach(i=>i.style.width=i.dataset.w+'%'));
-  $('diag').style.setProperty('--c', c);
-  const d=drivers(s,t);
-  $('drvTag').textContent=`Physical drivers · ${CAT[s.cat].label}`;
-  $('drvLine').innerHTML=d.line;
-  $('drivers').innerHTML=d.best.map(x=>`<li><b>Closest:</b> ${x}</li>`).join('')+d.worst.map(x=>`<li><b>Largest gap:</b> ${x}</li>`).join('');
-  $('usecase').innerHTML=`<b>What this site is good for.</b> ${s.use} <span style="color:var(--fg-2)">(curated recommendation, notebook §6e3, not pipeline output)</span>`;
   document.querySelectorAll('#regBody tr').forEach(tr=>tr.classList.toggle('sel', tr.dataset.id===id));
 }
 
@@ -2091,6 +2185,7 @@ let sortKey='rank', sortDir=1, regCat='all';
 function renderReg(){
   const rows=SITES.filter(s=>regCat==='all'||s.cat===regCat).sort((a,b)=>{ const va=a[sortKey], vb=b[sortKey]; return (typeof va==='string'? va.localeCompare(vb) : va-vb)*sortDir; });
   $('regBody').innerHTML=rows.map(s=>`<tr data-id="${s.id}" class="${s.id===selectedId?'sel':''}" tabindex="0">
+    <td class="cmpcell"><button class="cmpt" type="button" data-addc="${s.id}" aria-pressed="${inCompare(s.id)}" style="--c:var(${inCompare(s.id)?slotVar(s.id):'--fg'})" aria-label="${inCompare(s.id)?'Remove':'Add'} ${s.name} ${inCompare(s.id)?'from':'to'} comparison">${inCompare(s.id)?'✓':'+'}</button></td>
     <td>#${s.rank}</td><td class="site">${s.name}<small>${s.sub}</small></td>
     <td><span class="chip" style="--c:var(${CAT[s.cat].v})"><span class="dotc"></span>${CAT[s.cat].short}</span></td>
     <td><div class="sbar"><span style="--c:var(${CAT[s.cat].v})"><i style="width:${s.off.Moon}%"></i></span>${s.off.Moon.toFixed(2)}</div></td>
@@ -2099,11 +2194,11 @@ function renderReg(){
     <td>${s.lat.toFixed(4)}, ${s.lon.toFixed(4)}</td></tr>`).join('');
   document.querySelectorAll('#regBody tr').forEach(tr=>{
     const go=()=>{ $('maps').scrollIntoView({behavior:'smooth'}); setTimeout(()=>select(tr.dataset.id,{fly:true,source:'table'}), 450); };
-    tr.addEventListener('click', go); tr.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); } });
+    tr.addEventListener('click', e=>{ if(e.target.closest('.cmpt')) return; go(); }); tr.addEventListener('keydown', e=>{ if(e.target.closest('.cmpt')) return; if(e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); } });
   });
-  document.querySelectorAll('#regTable th').forEach(th=>{ th.removeAttribute('aria-sort'); const a=th.querySelector('.arr'); if(th.dataset.k===sortKey){ th.setAttribute('aria-sort', sortDir===1?'ascending':'descending'); a.textContent=sortDir===1?'↑':'↓'; } else a.textContent='↕'; });
+  document.querySelectorAll('#regTable th[data-k]').forEach(th=>{ th.removeAttribute('aria-sort'); const a=th.querySelector('.arr'); if(th.dataset.k===sortKey){ th.setAttribute('aria-sort', sortDir===1?'ascending':'descending'); a.textContent=sortDir===1?'↑':'↓'; } else a.textContent='↕'; });
 }
-document.querySelectorAll('#regTable th').forEach(th=>th.addEventListener('click', ()=>{ const k=th.dataset.k; if(sortKey===k) sortDir*=-1; else { sortKey=k; sortDir=['score','mars','polar','geo','env'].includes(k)?-1:1; } renderReg(); }));
+document.querySelectorAll('#regTable th[data-k]').forEach(th=>th.addEventListener('click', ()=>{ const k=th.dataset.k; if(sortKey===k) sortDir*=-1; else { sortKey=k; sortDir=['score','mars','polar','geo','env'].includes(k)?-1:1; } renderReg(); }));
 document.querySelectorAll('[data-rcat]').forEach(btn=>btn.addEventListener('click', ()=>{ regCat=btn.dataset.rcat; document.querySelectorAll('[data-rcat]').forEach(b=>b.setAttribute('aria-pressed', b===btn)); renderReg(); }));
 $('csvBtn').addEventListener('click', async ()=>{
   const head='Rank,Site_ID,Site,Category,Moon_Composite_%,Mars_Composite_%,Polar_Composite_%,Best_Target,Moon_Geology_%,Moon_Environment_%,MC_Rank_90CI,Bare_Albedo,Albedo_SD,T2M_Range_C,Precip_mm_day,Solar_kWh_m2_day,Relief_m,Slope_deg,T2M_Mean_C,Lat,Lon';
@@ -2147,7 +2242,7 @@ function simRender(){
   const rank=SITES.filter(s=>s.off[sTarget]>p.total).length+1;
   $('pRank').textContent=`#${rank} of 9 · ${TSHORT[sTarget]}`;
   const b=$('simBadge'); b.className='verdict '+(band==='strong'?'pass':band==='weak'?'fail':''); b.textContent=band+' analog';
-  let txt=band==='strong'?`Close to the ${TNAME[sTarget].toLowerCase()} profile on all three pillars.`:band==='moderate'?'A partial match. Check which pillar is pulling it down.':`Unlikely to be an analog for the ${TNAME[sTarget].toLowerCase()} with these readings.`;
+  let txt=band==='strong'?`Close to the ${tl(sTarget)} profile on all three pillars.`:band==='moderate'?'A partial match. Check which pillar is pulling it down.':`Unlikely to be an analog for the ${tl(sTarget)} with these readings.`;
   if(r.sd>0.03) txt+=' Snow flag: albedo SD is above 0.03, so check the darkest-month albedo.';
   if(r.albedo>0.21 && r.rain<0.5) txt+=' Bright and dry usually means quartz sand, like Algodones.';
   $('simText').textContent=txt;
@@ -2247,13 +2342,13 @@ function renderDetail(){
       <dl><dt>Geology · Env.</dt><dd>${s.sc[aTarget].geo.toFixed(1)} · ${s.sc[aTarget].envIdx.toFixed(1)}</dd><dt>Albedo · SD</dt><dd>${s.albedo.toFixed(2)} · ${s.sd.toFixed(3)}</dd><dt>Swing · rain</dt><dd>${s.swing.toFixed(1)} °C · ${s.rain.toFixed(2)} mm/d</dd><dt>Solar</dt><dd>${s.solar.toFixed(2)} kWh/m²/d</dd><dt>Relief · slope</dt><dd>${s.relief} m · ${s.slope.toFixed(1)}°</dd><dt>Mean temp.</dt><dd>${s.t2m.toFixed(1)} °C</dd><dt>MC rank 90%</dt><dd>${s.mc.ci} · P(#1) ${s.mc.p1}%</dd>
       <dt>EMIT · HLS</dt><dd>${nf(s.cov.emit)} · ${nf(s.cov.hls)} granules</dd><dt>ECOSTRESS</dt><dd>${nf(s.cov.eco)} granules</dd><dt>Sentinel-1</dt><dd>${nf(s.cov.s1)} scenes</dd></dl>
       <p>${s.use}${s.qa?` <span style="color:var(--fg-2)">QA: ${s.qa}</span>`:''}</p>
-      <div class="links"><button class="btn sm solid" type="button" data-cmp="${s.id}">Compare</button><a class="btn sm" href="${worldview(s.lat,s.lon)}" target="_blank" rel="noopener">Worldview ↗</a></div>`;
+      <div class="links">${addBtn(s.id)}<a class="btn sm" href="${worldview(s.lat,s.lon)}" target="_blank" rel="noopener">Worldview ↗</a></div>`;
   } else if(kind==='bench'){
     el.innerHTML=`${x}<span class="kind"><i class="sym ring" style="display:inline-block"></i>Benchmark analog · scored, not tested</span><h4>${s.name}</h4><div class="where">${s.sub} · ${fmtLL(s.lat,s.lon)}</div>
       ${tbars(s.off)}
       <dl><dt>Best target</dt><dd>${TNAME[s.best]}</dd><dt>Mean temp.</dt><dd>${s.t2m.toFixed(1)} °C</dd><dt>Cold check</dt><dd>${s.cold?'Pass (below 0 °C)':'No'}</dd><dt>Albedo</dt><dd>${s.albedo.toFixed(2)}</dd><dt>Solar</dt><dd>${s.solar.toFixed(2)} kWh/m²/d</dd><dt>Relief · slope</dt><dd>${s.relief} m · ${s.slope.toFixed(1)}°</dd></dl>
       <p>${s.use} <span style="color:var(--fg-2)">QA: ${s.qa}</span></p>
-      <div class="links"><a class="btn sm" href="${worldview(s.lat,s.lon)}" target="_blank" rel="noopener">Worldview ↗</a></div>`;
+      <div class="links">${addBtn(s.id)}<a class="btn sm" href="${worldview(s.lat,s.lon)}" target="_blank" rel="noopener">Worldview ↗</a></div>`;
   } else if(kind==='sens'){
     el.innerHTML=`${x}<span class="kind"><i class="sym ring sm" style="display:inline-block"></i>Sensitivity set · ${s.kind}</span><h4>${s.name}</h4><div class="where">${s.sub} · ${fmtLL(s.lat,s.lon)}</div>
       <dl style="margin-top:16px"><dt>Albedo</dt><dd>${s.albedo.toFixed(2)}</dd><dt>Solar</dt><dd>${s.solar.toFixed(2)} kWh/m²/d</dd><dt>Relief · slope</dt><dd>${s.relief} m · ${s.slope.toFixed(1)}°</dd></dl>
@@ -2266,7 +2361,7 @@ function renderDetail(){
         ${p.novel?'<span class="flag">★ Novel candidate · field-verify</span>':`<p style="color:var(--fg-2)">Not flagged: ${p.near<25?'closer than 25 km to a registry site':'geology index below the 69.1% threshold'}.</p>`}`
         : `<dl style="margin-top:16px"><dt>Nearest site</dt><dd>${nf(+s.near.toFixed(0))} km</dd></dl><p style="color:var(--fg-2)">Scored in the run, but outside the printed top 12. Full values are in <span class="mono">cavesight_discovery_scan.csv</span>.</p>`}
       <p>A grid point inside a pre-registered box, chosen before any data was fetched. A candidate for a closer look, not a confirmed cave.</p>
-      <div class="links"><a class="btn sm" href="${worldview(s.lat,s.lon)}" target="_blank" rel="noopener">Worldview ↗</a></div>`;
+      <div class="links">${p?addBtn(s.id):''}<a class="btn sm" href="${worldview(s.lat,s.lon)}" target="_blank" rel="noopener">Worldview ↗</a></div>`;
   } else if(kind==='region'){
     const pts=SCAN.filter(sp=>sp.reg===s.id), pr=pts.filter(sp=>sp.pr);
     el.innerHTML=`${x}<span class="kind"><i class="sym box" style="display:inline-block"></i>Scan region · ${s.kind==='sand'?'sand scan-control':'volcanic province'}</span><h4>${s.label}</h4>
@@ -2275,7 +2370,6 @@ function renderDetail(){
       <p>${s.kind==='sand'?'A sand desert scanned as a control: if the engine is working, it should score low here.':'A volcanic province with no registry site inside it, so anything flagged here is new ground.'}</p>`;
   }
   const c=$('adClose'); if(c) c.addEventListener('click', ()=>{ aSel=null; refreshIcons(); renderDetail(); });
-  const b=el.querySelector('[data-cmp]'); if(b) b.addEventListener('click', ()=>{ select(b.dataset.cmp,{}); $('compare').scrollIntoView({behavior:'smooth'}); });
 }
 function atlasSelect(kind, item){
   aSel={kind, item, id:item.id}; refreshIcons(); renderDetail();
@@ -2284,6 +2378,243 @@ function atlasSelect(kind, item){
 }
 buildAtlasMarkers();
 ['primary','bench','scan','regions'].forEach(k=>AL[k].addTo(amap));
+
+/* ================= COMPARE · head to head ================= */
+const ENT = {};
+SITES.forEach(s=>ENT[s.id]={key:s.id, kind:'primary', name:s.name, sub:`${CAT[s.cat].label} · ${s.sub}`, cat:s.cat, lat:s.lat, lon:s.lon, off:s.off,
+  f:{albedo:s.albedo, relief:s.relief, slope:s.slope, swing:s.swing, rain:s.rain, solar:s.solar, sd:s.sd}, t2m:s.t2m, mc:s.mc, use:s.use, qa:s.qa});
+BENCH.forEach(b=>ENT[b.id]={key:b.id, kind:'bench', name:b.name, sub:`Benchmark analog · ${b.sub}`, lat:b.lat, lon:b.lon, off:b.off,
+  f:{albedo:b.albedo, relief:b.relief, slope:b.slope, solar:b.solar}, t2m:b.t2m, cold:b.cold, use:b.use, qa:b.qa});
+SCAN.filter(sp=>sp.pr).forEach(sp=>{ const p=sp.pr, lab=REGIONS[sp.reg].label.split(',')[0];
+  ENT[sp.id]={key:sp.id, kind:'scan', name:`${lab} · scan ${sp.id.slice(-2)}`, sub:`${p.novel?'Novel candidate':'Scan point, not flagged'} · ${fmtLL(sp.lat,sp.lon)}`, lat:sp.lat, lon:sp.lon,
+    off:{Moon:p.Moon, Mars:p.Mars, Polar:p.Polar}, f:{albedo:p.alb, relief:p.rel, slope:Math.atan(p.rel/150)*180/Math.PI, rain:p.rain}, near:p.near, novel:p.novel, geoPrinted:p.geo,
+    use:p.novel?'Candidate for Phase-2 field verification (thermal buffering, EMIT mineralogy).':'Scored, but not flagged by the novelty rule.', qa:''}; });
+
+const FEAT_ROWS = [
+  ['albedo','Bare-earth albedo', v=>v.toFixed(2)], ['relief','Local relief', v=>v.toFixed(0)+' m'], ['slope','Rim slope', v=>v.toFixed(1)+'°'],
+  ['swing','Day–night swing', v=>v.toFixed(1)+' °C'], ['rain','Precipitation', v=>v.toFixed(2)+' mm/d'], ['solar','Solar irradiance', v=>v.toFixed(2)+' kWh'], ['sd','Albedo monthly SD', v=>v.toFixed(3)]
+];
+const PILLAR_FEATS = {reg:['albedo'], topo:['relief','slope'], env:['swing','rain','solar','sd']};
+const PILLAR_NAME = {reg:'regolith', topo:'topography', env:'environment'};
+function partScore(e, t){
+  const S=SCALE[t], f=e.f, has=k=>f[k]!=null, dz={};
+  FEATS.forEach(k=>{ if(has(k)) dz[k]=(f[k]-S.m[k])/S.sd[k]-S.zt[k]; });
+  const reg = has('albedo') ? 100*Math.exp(-0.55*Math.abs(dz.albedo)) : null;
+  const topo = has('relief')&&has('slope') ? 100*Math.exp(-0.35*Math.sqrt((dz.relief**2+dz.slope**2)/2)) : null;
+  const env = PILLAR_FEATS.env.every(has) ? 100*Math.exp(-0.45*Math.sqrt(PILLAR_FEATS.env.reduce((a,k)=>a+dz[k]**2,0)/4)) : null;
+  return {reg, topo, env, geo: reg!=null&&topo!=null ? Math.sqrt(reg*topo) : null, envIdx:env, dz, total:e.off[t]};
+}
+const bestOf = e => ['Moon','Mars','Polar'].reduce((a,b)=>e.off[b]>e.off[a]?b:a,'Moon');
+const rankAmong8 = (e,t) => e.kind==='primary' ? SITES.slice().sort((a,b)=>b.off[t]-a.off[t]).findIndex(x=>x.id===e.key)+1 : null;
+
+var cSet=['SITE_01','SITE_04'], cFocus='SITE_01', cRows='all';
+var SLOTS=['--s1','--s2','--s3'];
+function inCompare(k){ return (cSet||[]).includes(k); }
+function slotVar(k){ return ["--s1","--s2","--s3"][Math.max(0,(cSet||[]).indexOf(k))]; }
+const slotCol = k => cssv(slotVar(k));
+const shortN = e => e.kind==='scan' ? e.name : shortName(e.name);
+const addBtn = k => `<button class="btn sm ${inCompare(k)?'':'solid'}" type="button" data-addc="${k}">${inCompare(k)?'✓ In comparison':'+ Add to compare'}</button>`;
+
+function toggleCompare(k, opts={}){
+  if(!ENT[k]) return;
+  if(inCompare(k)){
+    cSet=cSet.filter(x=>x!==k);
+    if(!opts.quiet) toast(`Removed ${shortN(ENT[k])} from the comparison.`);
+  } else {
+    let msg;
+    if(cSet.length>=3){ const out=cSet.pop(); msg=`Comparison holds 3 sites: replaced ${shortN(ENT[out])} with ${shortN(ENT[k])}.`; }
+    cSet.push(k); cFocus=k;
+    if(!opts.quiet) toast(msg || `Added ${shortN(ENT[k])} to the comparison (${cSet.length} of 3).`);
+  }
+  if(!cSet.includes(cFocus)) cFocus=cSet[0]||null;
+  renderCompare(); renderReg(); refreshPopups();
+  if(aSel) renderDetail();
+}
+function refreshPopups(){ SITES.forEach(s=>markers[s.id].setPopupContent(popupHtml(s))); }
+document.addEventListener('click', e=>{
+  const b=e.target.closest('[data-addc]'); if(!b) return;
+  e.preventDefault(); e.stopPropagation(); toggleCompare(b.dataset.addc);
+});
+
+/* target, rows, actions */
+document.querySelectorAll('[data-ctarget]').forEach(btn=>btn.addEventListener('click', ()=>{
+  cTarget=btn.dataset.ctarget; document.querySelectorAll('[data-ctarget]').forEach(b=>b.setAttribute('aria-pressed', b===btn)); renderCompare();
+}));
+var cTarget='Moon';
+const setCTarget = t => { cTarget=t; document.querySelectorAll('[data-ctarget]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.ctarget===t)); };
+document.querySelectorAll('[data-crows]').forEach(btn=>btn.addEventListener('click', ()=>{
+  cRows=btn.dataset.crows; document.querySelectorAll('[data-crows]').forEach(b=>b.setAttribute('aria-pressed', b===btn)); renderTable();
+}));
+$('cAdd').addEventListener('change', e=>{ const k=e.target.value; if(k) toggleCompare(k); e.target.value=''; });
+$('cClear').addEventListener('click', ()=>{ if(!cSet.length) return; cSet=[]; cFocus=null; renderCompare(); renderReg(); refreshPopups(); if(aSel) renderDetail(); toast('Comparison cleared. Add sites from the menu, the presets, the maps or the registry.'); });
+$('cSwap').addEventListener('click', ()=>{ if(cSet.length<2) return toast('Add a second site first.'); cSet.push(cSet.shift()); renderCompare(); renderReg(); toast(`${shortN(ENT[cSet[0]])} is now the reference.`); });
+$('cMap').addEventListener('click', ()=>{
+  if(!cSet.length) return toast('Add a site first.');
+  let pts=cSet.map(k=>[ENT[k].lat, ENT[k].lon]);
+  const lons=pts.map(p=>p[1]); if(Math.max(...lons)-Math.min(...lons)>180) pts=pts.map(([a,b])=>[a, b<0?b+360:b]);
+  $('atlas').scrollIntoView({behavior:'smooth'});
+  setTimeout(()=>{
+    if(pts.length===1) amap.flyTo(pts[0], 6, {duration:1.2}); else amap.flyToBounds(L.latLngBounds(pts).pad(0.35), {duration:1.4, maxZoom:7});
+    const e=ENT[cSet[0]]; const kind=e.kind; const item = kind==='primary'?SITES.find(s=>s.id===e.key):kind==='bench'?BENCH.find(s=>s.id===e.key):SCAN.find(s=>s.id===e.key);
+    aSel={kind, item, id:item.id}; refreshIcons(); renderDetail();
+  }, 600);
+});
+$('cCopy').addEventListener('click', async ()=>{
+  const rows=[...$('cTable').querySelectorAll('tr')].filter(r=>!r.classList.contains('hide')).map(r=>[...r.children].map(c=>`"${c.innerText.replace(/\s*\n\s*/g,' ').replace(/●/g,'').trim()}"`).join(','));
+  try{ await navigator.clipboard.writeText(rows.join('\n')); toast('Comparison copied as CSV.'); }catch(e){ toast('Clipboard is blocked here. Select the table and copy it manually.'); }
+});
+const PRESETS = [
+  ['Anchor vs runner-up', ['SITE_01','SITE_04'], 'Moon'],
+  ['Why H1 fails', ['SITE_07','SITE_05','SITE_02'], 'Moon'],
+  ['New candidate vs anchor', ['SCAN_Harrat_Khaybar_SA_05','SITE_01'], 'Moon'],
+  ['Lava tube vs classic analog', ['SITE_06','SITE_16'], 'Polar'],
+  ['Mars: El Pinacate vs Death Valley', ['SITE_02','SITE_16','SITE_13'], 'Mars'],
+  ['Cold check: Haughton vs McMurdo', ['SITE_14','SITE_15'], 'Polar']
+];
+PRESETS.forEach(([n,keys,t])=>{ const b=document.createElement('button'); b.type='button'; b.textContent=n;
+  b.addEventListener('click', ()=>{ cSet=keys.slice(); cFocus=keys[0]; setCTarget(t); renderCompare(); renderReg(); refreshPopups(); if(aSel) renderDetail(); });
+  $('cPresets').appendChild(b); });
+$('cTrayGo').addEventListener('click', ()=>$('compare').scrollIntoView({behavior:'smooth'}));
+let compareInView=false;
+if('IntersectionObserver' in window) new IntersectionObserver(es=>es.forEach(e=>{ compareInView=e.isIntersecting; updateTray(); }), {threshold:0.05}).observe($('compare'));
+function updateTray(){
+  $('cTray').classList.toggle('show', cSet.length>0 && !compareInView);
+  $('cTrayDots').innerHTML=cSet.map(k=>`<i style="--c:var(${slotVar(k)})"></i>`).join('');
+  $('cTrayText').textContent = cSet.length ? `Comparing ${cSet.map(k=>shortN(ENT[k])).join(' · ')}` : '';
+}
+
+/* renderers */
+function renderPicked(){
+  $('cPicked').innerHTML = cSet.length ? cSet.map((k,i)=>{ const e=ENT[k];
+    return `<span class="cpick ${i===0?'ref':''}" style="--c:var(${SLOTS[i]})" data-focus="${k}" title="Open deep dive"><i></i>${shortN(e)} <small>${e.kind==='primary'?CAT[e.cat].short:e.kind==='bench'?'Benchmark':'Scan'}</small>${i===0&&cSet.length>1?'<span class="refb">Ref</span>':''}<button class="x" type="button" data-addc="${k}" aria-label="Remove ${e.name}">✕</button></span>`; }).join('')
+    : `<span class="cempty">Nothing selected yet. Pick a preset below, or add a site from the menu.</span>`;
+  $('cPicked').querySelectorAll('[data-focus]').forEach(el=>el.addEventListener('click', e=>{ if(e.target.closest('.x')) return; cFocus=el.dataset.focus; renderDeep(); renderCards(); $('deep').scrollIntoView({behavior:'smooth', block:'nearest'}); }));
+  const opt = (k,label) => cSet.includes(k) ? '' : `<option value="${k}">${label}</option>`;
+  $('cAdd').innerHTML = `<option value="">${cSet.length>=3?'+ Replace a site…':'+ Add a site'} (${cSet.length} of 3)</option>
+    <optgroup label="Primary sites">${SITES.slice().sort((a,b)=>a.rank-b.rank).map(s=>opt(s.id, `#${s.rank} ${s.name}`)).join('')}</optgroup>
+    <optgroup label="Benchmark analogs">${BENCH.map(b=>opt(b.id, b.name)).join('')}</optgroup>
+    <optgroup label="Scan candidates (printed)">${SCAN.filter(sp=>sp.pr).sort((a,b)=>b.pr.Moon-a.pr.Moon).map(sp=>opt(sp.id, `${ENT[sp.id].name}${sp.pr.novel?' ★':''}`)).join('')}</optgroup>`;
+}
+function renderRadar(){
+  const t=cTarget, fg2=cssv('--fg-2');
+  const ds=[{label:TNAME[t]+' target', data:[100,100,100,100,100], borderDash:[5,4], pointRadius:2.5, borderWidth:1.3, backgroundColor:'transparent', borderColor:fg2, pointBackgroundColor:fg2}];
+  cSet.forEach(k=>{ const e=ENT[k], p=partScore(e,t), c=slotCol(k), sim=f=>p.dz[f]!=null?100*Math.exp(-DECAY[f]*Math.abs(p.dz[f])):null;
+    ds.push({label:shortN(e), data:[p.reg, p.topo, sim('rain'), sim('solar'), sim('swing')], borderColor:c, pointBackgroundColor:c, backgroundColor:c+(k===cFocus?'30':'14'), borderWidth:k===cFocus?2.4:1.6, pointRadius:k===cFocus?4:3, spanGaps:false}); });
+  radar.data.datasets=ds; radar.update();
+}
+function renderCards(){
+  const t=cTarget, items=cSet.map(k=>ENT[k]).sort((a,b)=>b.off[t]-a.off[t]), lead=items[0];
+  $('hCards').innerHTML = items.map((e,i)=>{ const r=rankAmong8(e,t), d=lead.off[t]-e.off[t];
+    return `<div class="hcard ${e.key===cFocus?'focus':''}" style="--c:var(${slotVar(e.key)})" data-focus="${e.key}" tabindex="0" role="button" aria-label="Deep dive on ${e.name}">
+      <div class="pos"><b>${i+1}</b></div>
+      <div class="nm"><b>${e.name}</b><small>${r?`#${r} of 8 primary sites`:e.kind==='bench'?'Benchmark · scored, not tested':'Scan point · candidate'} · best target ${TSHORT[bestOf(e)]}</small></div>
+      <div class="sc"><b>${e.off[t].toFixed(1)}</b><small>${i===0?(items.length>1?'leader':TNAME[t]):`−${d.toFixed(1)} pts`}</small></div>
+      <div class="gbar"><i style="width:${e.off[t]}%"></i></div></div>`; }).join('') || '';
+  $('hCards').querySelectorAll('[data-focus]').forEach(el=>{ const go=()=>{ cFocus=el.dataset.focus; renderDeep(); renderCards(); renderRadar(); }; el.addEventListener('click', go); el.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); } }); });
+}
+function verdict(){
+  const t=cTarget, T=tl(t), items=cSet.map(k=>ENT[k]).sort((a,b)=>b.off[t]-a.off[t]);
+  if(!items.length) return `<span class="vk">Verdict</span>Pick two or three sites to see who fits the ${T} better, and why.`;
+  const L=items[0], Lp=partScore(L,t), notes=[];
+  if(items.length===1){
+    return `<span class="vk">Verdict</span><b>${L.name}</b> scores <b>${L.off[t].toFixed(1)}%</b> against the ${T}; its best target is the ${tl(bestOf(L))} (${L.off[bestOf(L)].toFixed(1)}%). Add a second site to compare.`;
+  }
+  let head = `<b>${L.name}</b> fits the ${T} best at <b>${L.off[t].toFixed(1)}%</b>, `+items.slice(1).map(O=>`${(L.off[t]-O.off[t]).toFixed(1)} points ahead of ${shortN(O)}`).join(' and ')+'.';
+  const margin=L.off[t]-items[1].off[t];
+  if(margin<2) head += ` That is <b>too close to call</b>.`;
+  items.slice(1).forEach(O=>{
+    const Op=partScore(O,t), diffs=['reg','topo','env'].filter(k=>Lp[k]!=null&&Op[k]!=null).map(k=>[k, Lp[k]-Op[k]]);
+    if(!diffs.length) return;
+    const big=diffs.slice().sort((a,b)=>Math.abs(b[1])-Math.abs(a[1]))[0];
+    const [pk, dv]=big, winner=dv>=0?L:O, loser=dv>=0?O:L, Wp=dv>=0?Lp:Op, Lsp=dv>=0?Op:Lp;
+    const feats=PILLAR_FEATS[pk].filter(f=>Wp.dz[f]!=null&&Lsp.dz[f]!=null).sort((a,b)=>(Math.abs(Lsp.dz[b])-Math.abs(Wp.dz[b]))-(Math.abs(Lsp.dz[a])-Math.abs(Wp.dz[a])));
+    const fr=FEAT_ROWS.find(r=>r[0]===feats[0]);
+    notes.push(`Biggest gap between ${shortN(L)} and ${shortN(O)}: the <b>${PILLAR_NAME[pk]} pillar</b>, won by ${shortN(winner)} (${(dv>=0?Lp:Op)[pk].toFixed(1)} vs ${(dv>=0?Op:Lp)[pk].toFixed(1)})`+(fr?`, mostly from ${fr[1].toLowerCase()}: ${fr[2](winner.f[fr[0]])} vs ${fr[2](loser.f[fr[0]])} (target ${fr[2](REFS[t][fr[0]])}).`:'.'));
+    if(dv>=0) diffs.filter(([k,v])=>v<0).forEach(([k,v])=>notes.push(`${shortN(O)} is still closer on <b>${PILLAR_NAME[k]}</b> (${Op[k].toFixed(1)} vs ${Lp[k].toFixed(1)}).`));
+    else { const lw=diffs.filter(([k,v])=>v>0); if(lw.length) notes.push(`${shortN(L)} still comes out ahead overall thanks to `+lw.map(([k])=>`<b>${PILLAR_NAME[k]}</b> (${Lp[k].toFixed(1)} vs ${Op[k].toFixed(1)})`).join(' and ')+'.'); }
+    if(t==='Moon' && L.mc && O.mc){
+      const [a1,a2]=L.mc.ci.split('–').map(Number), [b1,b2]=O.mc.ci.split('–').map(Number);
+      notes.push(Math.max(a1,b1)<=Math.min(a2,b2) ? `Monte Carlo rank ranges overlap (${L.mc.ci} vs ${O.mc.ci}), so this order is <b>not settled</b> under measurement noise.` : `Monte Carlo rank ranges do not overlap (${L.mc.ci} vs ${O.mc.ci}): the order <b>holds</b> under measurement noise.`);
+    }
+  });
+  items.filter(e=>bestOf(e)!==t).forEach(e=>notes.push(`${shortN(e)} actually fits the <b>${tl(bestOf(e))}</b> better (${e.off[bestOf(e)].toFixed(1)}%).`));
+  items.filter(e=>partScore(e,t).env==null).forEach(e=>notes.push(`${shortN(e)}: the environment pillar can't be rebuilt here because some climate readings are not in the printout; its composite is the notebook's value.`));
+  if(items.some(e=>e.kind==='bench')) notes.push('Benchmarks are scored on the same scale but are not part of any hypothesis test.');
+  if(items.some(e=>e.kind==='scan')) notes.push('Scan points are candidates for field checks, not confirmed caves.');
+  if(items.some(e=>e.cold)) notes.push(`Cold check (annual mean below 0 °C, reported, not scored): ${items.filter(e=>e.kind==='bench').map(e=>`${shortN(e)} ${e.cold?'passes':'does not'} (${e.t2m.toFixed(1)} °C)`).join(', ')}.`);
+  return `<span class="vk">Verdict · ${TNAME[t]}</span>${head}<ul>${notes.map(n=>`<li>${n}</li>`).join('')}</ul>`;
+}
+function renderTable(){
+  const t=cTarget, items=cSet.map(k=>ENT[k]), P=items.map(e=>partScore(e,t));
+  $('ctTarget').textContent=TNAME[t].toUpperCase();
+  if(!items.length){ $('cTable').innerHTML='<tbody><tr><td class="k">Add sites to fill this table.</td></tr></tbody>'; return; }
+  const head=`<thead><tr><th>Feature</th><th>Target<small>${TNAME[t]}</small></th>${items.map(e=>`<th class="site" style="--c:var(${slotVar(e.key)})" data-focus="${e.key}"><span><i></i>${shortN(e)}</span><small>${e.kind==='primary'?CAT[e.cat].short:e.kind==='bench'?'Benchmark':'Scan'}</small></th>`).join('')}</tr></thead>`;
+  const rows=[], spread=[];
+  const scoreRow=(label, vals, fmt=v=>v.toFixed(1), always=false)=>{
+    const ok=vals.filter(v=>v!=null), best=ok.length>1?Math.max(...ok):null;
+    rows.push({always, spread: ok.length>1 ? (Math.max(...ok)-Math.min(...ok))/8 : 0,
+      html:`<td class="k">${label}</td><td class="tg">100</td>`+vals.map((v,i)=>v==null?'<td class="na">—</td>':`<td class="${v===best?'win':''}" style="--c:var(${slotVar(items[i].key)})"><span class="v">${fmt(v)}</span><span class="mb"><i style="width:${v}%"></i></span></td>`).join('')});
+  };
+  rows.push({grp:true, html:`<td colspan="${items.length+2}">Scores against the ${tl(t)}</td>`});
+  scoreRow('Composite', items.map(e=>e.off[t]), v=>v.toFixed(1), true);
+  scoreRow('Regolith pillar', P.map(p=>p.reg)); scoreRow('Topography pillar', P.map(p=>p.topo)); scoreRow('Environment pillar', P.map(p=>p.env));
+  scoreRow('Geology index', P.map(p=>p.geo)); 
+  rows.push({always:false, spread:0, html:`<td class="k">Rank among the 8</td><td class="tg">—</td>`+items.map(e=>{ const r=rankAmong8(e,t); return r?`<td><span class="v">#${r}</span></td>`:'<td class="na">not ranked</td>'; }).join('')});
+  rows.push({always:true, spread:0, html:`<td class="k">Best of three targets</td><td class="tg">—</td>`+items.map(e=>`<td><span class="v">${TSHORT[bestOf(e)]} ${e.off[bestOf(e)].toFixed(1)}</span></td>`).join('')});
+  if(t==='Moon') rows.push({always:false, spread:0, html:`<td class="k">Monte Carlo rank, 90%</td><td class="tg">—</td>`+items.map(e=>e.mc?`<td><span class="v">${e.mc.ci}</span><span class="d">P(#1) ${e.mc.p1}%</span></td>`:'<td class="na">—</td>').join('')});
+  rows.push({grp:true, html:`<td colspan="${items.length+2}">Readings vs the target</td>`});
+  FEAT_ROWS.forEach(([k,label,fmt])=>{
+    const tv=REFS[t][k], vals=items.map(e=>e.f[k]), ok=vals.map((v,i)=>[v,i]).filter(([v])=>v!=null);
+    const dist=ok.map(([v,i])=>[Math.abs(v-tv),i]), bestD=dist.length>1?Math.min(...dist.map(d=>d[0])):null;
+    const zs=ok.map(([v])=>v/SCALE[t].sd[k]);
+    rows.push({always:false, spread: zs.length>1?Math.max(...zs)-Math.min(...zs):0,
+      html:`<td class="k">${label}</td><td class="tg">${fmt(tv)}</td>`+vals.map((v,i)=>v==null?'<td class="na">—</td>':`<td class="${bestD!=null&&Math.abs(Math.abs(v-tv)-bestD)<1e-9?'win':''}" style="--c:var(${slotVar(items[i].key)})"><span class="v">${fmt(v)}</span><span class="d">${v-tv>=0?'+':'−'}${fmt(Math.abs(v-tv)).replace(/ .*/,'')} from target</span></td>`).join('')});
+  });
+  rows.push({grp:true, html:`<td colspan="${items.length+2}">Context</td>`});
+  rows.push({always:false, spread:0, html:`<td class="k">Mean air temperature</td><td class="tg">${t==='Polar'?'&lt; 0 °C':'—'}</td>`+items.map(e=>e.t2m!=null?`<td><span class="v">${e.t2m.toFixed(1)} °C</span>${t==='Polar'?`<span class="d">${e.t2m<0?'cold check passes':'cold check fails'}</span>`:''}</td>`:'<td class="na">not printed</td>').join('')});
+  rows.push({always:false, spread:0, html:`<td class="k">Location</td><td class="tg">—</td>`+items.map(e=>`<td><span class="v">${e.lat.toFixed(2)}, ${e.lon.toFixed(2)}</span>${e.near!=null?`<span class="d">${Math.round(e.near).toLocaleString('en-US')} km from nearest site</span>`:''}</td>`).join('')});
+  const keep = new Set(); if(cRows==='diff'){ rows.filter(r=>!r.grp&&!r.always&&r.spread>0).sort((a,b)=>b.spread-a.spread).slice(0,5).forEach(r=>keep.add(r)); }
+  $('cTable').innerHTML = head + '<tbody>' + rows.map(r=>`<tr class="${r.grp?'grp':''} ${cRows==='diff'&&!r.grp&&!r.always&&!keep.has(r)?'hide':''}">${r.html}</tr>`).join('') + '</tbody>';
+  $('cTable').querySelectorAll('th[data-focus]').forEach(th=>th.addEventListener('click', ()=>{ cFocus=th.dataset.focus; renderDeep(); renderCards(); renderRadar(); $('deep').scrollIntoView({behavior:'smooth', block:'nearest'}); }));
+}
+function renderDeep(){
+  const e=ENT[cFocus];
+  $('deep').style.display = e ? '' : 'none';
+  if(!e) return;
+  const t=cTarget, p=partScore(e,t), c=slotCol(e.key);
+  $('deepTabs').innerHTML = cSet.map(k=>`<button type="button" data-dfocus="${k}" aria-pressed="${k===cFocus}">${shortN(ENT[k])}</button>`).join('');
+  $('deepTabs').querySelectorAll('[data-dfocus]').forEach(b=>b.addEventListener('click', ()=>{ cFocus=b.dataset.dfocus; renderDeep(); renderCards(); renderRadar(); }));
+  $('scoreBox').style.setProperty('--c', c);
+  $('cScore').innerHTML=e.off[t].toFixed(1)+'<small>%</small>';
+  $('cLabel').textContent='Composite · '+TNAME[t];
+  $('cName').textContent=e.name;
+  const r=rankAmong8(e,t);
+  $('cRankLabel').textContent = r ? 'Rank' : 'Status';
+  $('cRank').textContent = r ? `#${r} / 8` : (e.kind==='bench'?'Benchmark':'Scan');
+  $('mcRow').innerHTML = e.mc && t==='Moon'
+    ? `<span>Monte Carlo · P(rank 1)<b>${e.mc.p1}%</b></span><span>Median rank<b>${e.mc.med}</b></span><span>90% rank<b>${e.mc.ci}</b></span><span>Score 5–95%<b>${e.mc.lo.toFixed(1)}–${e.mc.hi.toFixed(1)}</b></span>`
+    : `<span>Best target<b>${TNAME[bestOf(e)]} · ${e.off[bestOf(e)].toFixed(1)}%</b></span><span>${e.mc?'Monte Carlo was run for the Moon target only.':e.kind==='bench'?`Mean air temp<b>${e.t2m.toFixed(1)} °C</b>`:`Nearest registry site<b>${Math.round(e.near).toLocaleString('en-US')} km</b>`}</span>`;
+  const ref=REFS[t], fv=k=>e.f[k]!=null?e.f[k]:null;
+  $('pillars').innerHTML=[
+    ['Regolith pillar', p.reg, fv('albedo')!=null?`albedo ${e.f.albedo.toFixed(2)} vs ${ref.albedo.toFixed(2)}`:'albedo not available'],
+    ['Topography pillar', p.topo, fv('relief')!=null?`relief ${e.f.relief} m · slope ${e.f.slope.toFixed(1)}° vs ${ref.relief} m · ${ref.slope}°`:'terrain not available'],
+    ['Environment pillar', p.env, p.env!=null?`swing ${e.f.swing.toFixed(1)} °C · rain ${e.f.rain.toFixed(2)} · solar ${e.f.solar.toFixed(2)} · SD ${e.f.sd.toFixed(3)}`:'some climate readings are not in the printout'],
+    ['Composite (notebook)', e.off[t], p.geo!=null?`Geology index ${p.geo.toFixed(1)}${p.env!=null?` · Environment index ${p.env.toFixed(1)}`:''}`:'']
+  ].map(([k,v,sub],i)=>`<div class="pill" style="--c:${i===3?cssv('--fg'):c}"><div class="top"><span>${k}</span><b>${v==null?'—':v.toFixed(1)+'%'}</b></div><div class="bar"><i data-w="${v==null?0:v}"></i></div><div class="sub">${sub}</div></div>`).join('');
+  requestAnimationFrame(()=>document.querySelectorAll('#pillars .bar i').forEach(i=>i.style.width=i.dataset.w+'%'));
+  $('deep').style.setProperty('--c', c);
+  const avail=Object.keys(NICE).filter(k=>p.dz[k]!=null).sort((a,b)=>Math.abs(p.dz[a])-Math.abs(p.dz[b]));
+  const fmt=k=>`${NICE[k][0]} ${NICE[k][1](e.f[k])} <span>(${TSHORT[t]} ${NICE[k][1](ref[k])})</span>`;
+  $('drvTag').textContent=`Physical drivers · ${e.kind==='primary'?CAT[e.cat].label:e.kind==='bench'?'Benchmark analog':'Scan point'}`;
+  $('drvLine').innerHTML = p.geo!=null&&p.env!=null ? `Score driven mainly by <b>${p.geo>p.env?'geology':'environment'}</b> (Geology ${p.geo.toFixed(0)} · Environment ${p.env.toFixed(0)}).` : `Built from the ${avail.length} of 7 readings available in the printout.`;
+  $('drivers').innerHTML = avail.slice(0,2).map(k=>`<li><b>Closest:</b> ${fmt(k)}</li>`).join('') + avail.slice(-2).reverse().filter(k=>!avail.slice(0,2).includes(k)).map(k=>`<li><b>Largest gap:</b> ${fmt(k)}</li>`).join('');
+  $('usecase').innerHTML=`<b>What this site is good for.</b> ${e.use}${e.qa?` <span style="color:var(--fg-2)">QA: ${e.qa}</span>`:''}`;
+}
+function renderCompare(){
+  if(cFocus && !cSet.includes(cFocus)) cFocus=cSet[0]||null;
+  if(!cFocus) cFocus=cSet[0]||null;
+  renderPicked(); renderRadar(); renderCards(); $('cVerdict').innerHTML=verdict(); renderTable(); renderDeep(); updateTray();
+}
 
 /* ================= THEME TOGGLE ================= */
 const SUN='<circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/>';
@@ -2294,7 +2625,7 @@ function applyThemeUi(){
   $('themeBtn').setAttribute('aria-label', dark?'Switch to light mode':'Switch to dark mode');
   earth.retheme(); atlasBase.retheme();
   AL.regions.eachLayer(r=>{ const k=Object.keys(REGIONS).find(id=>r.getTooltip().getContent()===REGIONS[id].label); const col=REGIONS[k].kind==='sand'?cssv('--c-ctrl'):cssv('--c-volc'); r.setStyle({color:col, fillColor:col}); });
-  themeRadar(); if(selectedId) select(selectedId,{}); else radar.update(); simRender(); renderHeat(); renderAtlasHeat(); renderDetail();
+  themeRadar(); renderCompare(); renderReg(); simRender(); renderHeat(); renderAtlasHeat(); renderDetail();
 }
 $('themeBtn').addEventListener('click', ()=>{
   root.dataset.theme = theme()==='light' ? 'dark' : 'light';
@@ -2324,6 +2655,7 @@ themeRadar();
 renderTri();
 renderReg();
 select('SITE_01', {fly:false});
+renderCompare();
 simRender();
 renderDetail();
 labelZoom();
