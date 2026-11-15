@@ -1,5 +1,5 @@
 # Cave-sight
-**CAVE-SIGHT ** is an open-source, multi-sensor planetary screening platform built for the **2026 NASA International Space Apps Challenge** (*"Identify Earth Locations that Analog the Permanent Moon Base Locations and Mars"*). It fuses open NASA Earth and planetary datasets to discover, score, and rank terrestrial basaltic lava tubes and collapse skylights as natural subsurface shelters for permanent astronaut habitats on the Moon and Mars.
+**CAVE-SIGHT ** is an open-source, multi-sensor planetary screening platform built for the **2026 NASA Space Apps Challenge** (*"Identify Earth Locations that Analog the Permanent Moon Base Locations and Mars"*). It fuses open NASA Earth and planetary datasets to discover, score, and rank terrestrial basaltic lava tubes and collapse skylights as natural subsurface shelters for permanent astronaut habitats on the Moon and Mars.
 
 - **Live Web Platform:** https://cave-sight.vercel.app/
 - **Challenge Track:** Identify Earth Locations that Analog the Permanent Moon Base Locations and Mars
